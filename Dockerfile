@@ -3,7 +3,7 @@ WORKDIR /root
 RUN apt-get update -y && \
     apt-get install -y --no-install-recommends \
     ghc cabal-install git ca-certificates ssh-client software-properties-common \
-    rename cmake make clang-4.0 llvm-4.0-dev ocaml-nox \
+    rename wget cmake make clang-4.0 llvm-4.0-dev ocaml-nox \
     camlp4 libocamlgraph-ocaml-dev camlidl libapron-ocaml-dev \
     libedit-dev zlib1g-dev zlib1g libgmp-dev ocamlbuild && \
     apt-add-repository ppa:mcrl2/release-ppa -y && \
@@ -17,7 +17,8 @@ RUN apt-get update -y && \
     cd .. && rm -rf godel2 && \
     git clone https://github.com/s-falke/llvm2kittel && \
     git clone https://github.com/s-falke/kittel-koat && \
-    mkdir build && cd build && cmake ../llvm2kittel && \
+    mkdir build && cd build && \
+    cmake ../llvm2kittel || true && \
     make && mv llvm2kittel /usr/bin && \
     cd ../kittel-koat && \
     HAVE_Z3=false make kittel && mv /usr/local/src/kittel-koat/_build/kittel.native /usr/bin/ && \
