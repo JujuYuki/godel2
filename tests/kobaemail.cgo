@@ -1,0 +1,17 @@
+-- NOT 2-LIVE (but 1-live)
+def t0() : let a = newchan ty, 0 ; 
+	   let b = newchan ty, 0 ; 
+	   spawn t(a,b);
+	   spawn u(a);
+	   spawn u(b);
+
+
+def t(x,y): if 
+    	       send x;
+     	       call t(y,x);
+	    else 
+	       call t(y,x);
+	    endif;
+
+def u(x) : recv x; 
+    	   call u(x)

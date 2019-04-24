@@ -1,0 +1,10 @@
+
+
+def t0() : call t1();
+
+def t1(a) : ifFor (int i = 0 ; i < 20; i++) then
+              ifFor (int j = 0 ; j < 30;j++) then 
+	                         close a 
+                             else close a endif;
+            else close a endif;
+

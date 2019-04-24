@@ -1,0 +1,9 @@
+def t0() : let a = newchan ty, 0 ;
+    	   send a;
+    	   call t();
+
+def s(): call t(); call s();
+
+def t(): if call s();
+    	 else call s();
+	 endif;

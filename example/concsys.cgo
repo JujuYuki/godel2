@@ -1,0 +1,51 @@
+def main_main():
+    call main_ReplicaSearch();
+def main_ReplicaSearch():
+    let t2 = newchan main_ReplicaSearch_t2_0_0, 0;
+    spawn main_ReplicaSearch_1(t2);
+    spawn main_ReplicaSearch_2(t2);
+    spawn main_ReplicaSearch_3(t2);
+--    call time_After();
+    call main_ReplicaSearch_3(t2);
+--def time_After():
+--    call time_NewTimer();
+--def time_NewTimer():
+--    let t0 = newchan time_NewTimer_t0_0_0, 1;
+--    call time_when();
+--def time_when():
+--    if else if call time_when_4(); else endif; endif;
+def main_ReplicaSearch_3(t2):
+    select
+        case recv t2;
+            call main_ReplicaSearch_3(t2)
+        case tau; 
+    endselect;
+--def time_Since():
+--    call time_Now();
+--    call time_Time_Sub();
+--def time_Time_Sub():
+--    call time_Time_Add();
+--    call time_Time_Equal();
+--    if else call time_Time_Before(); if else endif; endif;
+--def time_Time_Add():
+--    if call time_Time_Add_2(); else if call time_Time_Add_2(); else endif; endif;
+--def time_Time_Equal():
+--    if call time_Time_Equal_2(); else endif;
+--def time_Time_Before():
+--    if else if call time_Time_Before_4(); else endif; endif;
+--def time_Time_Before_4():
+--    call time_Time_Before_2();
+def main_ReplicaSearch_1(t2):
+    call main_First(t2);
+def main_First(t2):
+    let t3 = newchan main_First_t3_0_0, 0;
+    call main_First_1(t2,t3);
+def main_First_1(t2,t3):
+    if
+    --spawn main_First_1();
+    call main_First_1(t2,t3); else recv t3; endif;
+    send t2;
+def main_ReplicaSearch_2(t2):
+    call main_First(t2);
+def main_ReplicaSearch_3(t2):
+    call main_First(t2);

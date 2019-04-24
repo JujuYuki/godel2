@@ -1,0 +1,20 @@
+def main.main():
+    let t0 = newchan main.main.t0_0_0, 0;
+    spawn main.Generate(t0);
+    call main.main#1(t0);
+def main.main#1(t0):
+    recv t0;
+    let t10 = newchan main.main.t10_0_0, 0;
+    spawn main.Filter(t0, t10);
+    call main.main#1(t10);
+def main.Generate(t0):
+    call main.Generate#1(t0);
+def main.Generate#1(t0):
+    send t0;
+    call main.Generate#1(t0);
+def main.Filter(t0, t10):
+    call main.Filter#1(t0, t10);
+def main.Filter#1(t0, t10):
+    recv t0;
+    if send t10; call main.Filter#1(t0, t10); else call
+    main.Filter#1(t0, t10);endif;

@@ -1,0 +1,69 @@
+def main.main():
+    call main.main#2()
+def main.main#2():
+    let t7 = newchan main.main.t7_0_0, 0;
+    let t8 = newchan main.main.t8_0_0, 0;
+    let t9 = newchan main.main.t9_0_0, 0;
+    call main.main#7(t7,t8,t9);
+def main.main#7(t7,t8,t9):
+    spawn main.crawl(t8, t7, t9);
+    spawn main.crawl(t8, t7, t9);
+    spawn main.crawl(t8, t7, t9);
+    spawn main.crawl(t8, t7, t9);
+    spawn main.crawl(t8, t7, t9);
+    spawn main.crawl(t8, t7, t9);
+    spawn main.crawl(t8, t7, t9);
+    spawn main.crawl(t8, t7, t9);
+    spawn main.crawl(t8, t7, t9);
+    spawn main.crawl(t8, t7, t9);
+    spawn main.crawl(t8, t7, t9);
+    spawn main.crawl(t8, t7, t9);
+    spawn main.crawl(t8, t7, t9);
+    spawn main.crawl(t8, t7, t9);
+    spawn main.crawl(t8, t7, t9);
+    spawn main.crawl(t8, t7, t9);
+    spawn main.crawl(t8, t7, t9);
+    spawn main.crawl(t8, t7, t9);
+    spawn main.crawl(t8, t7, t9);
+    spawn main.crawl(t8, t7, t9);
+    send t7;
+    call main.main#10(t7,t8,t9);
+def main.main#10(t7,t8,t9):
+    if select
+      case recv t7; if call main.main#10(t7,t8,t9); else send t8; endif; 
+      case recv t9; call main.main#10(t7,t8,t9); 
+    endselect; else if else call main.main#18(t7,t8,t9); endif; endif;
+def main.main#18(t7,t8,t9):
+    if call main.main#24(t7,t8,t9); else call main.main#28(t7,t8,t9); endif;
+def main.main#24(t7,t8,t9):
+    call main.main#25(t7,t8,t9);
+def main.main#25(t7,t8,t9):
+    if call main.main#18(t7,t8,t9); else endif;
+def main.main#28(t7,t8,t9):
+    if call main.main#28(t7,t8,t9); else close t7; endif;
+
+def main.crawl(t8,t7,t9):
+    call main.crawl#3(t8,t7,t9);
+def main.crawl#3(t8,t7,t9):
+    if recv t8; 
+     -- call main.crawlOne(t7,t9);
+     call main.crawl#3(t8,t7,t9);
+    else endif;
+def main.crawlOne(t7,t9):
+    if send t9; else if send t9; else if send t9; else if else if send t9; else if if call main.crawlOne#12(t7,t9); else endif; else endif; endif; endif; endif; endif; endif;
+def main.crawlOne#12(t7,t9):
+            if
+            else
+                call main.crawlOne#19(t7,t9);
+            endif;
+
+--def main.crawlOne$1():
+--    send t9;
+--    call main.crawlOne$1();
+def main.crawlOne#19(t7,t9):
+    if else if if if if else 
+    call main.crawlOne#19(t7,t9); 
+endif; else endif; else if if if 
+call main.crawlOne#19(t7,t9); else 
+send t7; 
+call main.crawlOne#19(t7,t9); endif; else endif; else if else if if else endif; else if else endif; endif; endif; endif; endif; else if else endif; endif; endif;

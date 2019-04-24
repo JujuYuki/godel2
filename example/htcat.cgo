@@ -1,0 +1,216 @@
+def main.main():
+    call main.main#2();
+def main.main#2():
+    call main.main#4();
+def main.main#4():
+    call main.main#6();
+def main.main#6():
+    call main.main#7();
+def main.main#7():
+    call github.com_htcat_htcat.New();
+    --call main.main#12();
+def github.com_htcat_htcat.New():
+    call github.com_htcat_htcat.defrag.initDefrag();
+def github.com_htcat_htcat.defrag.initDefrag():
+    let t3 = newchan github.com_htcat_htcat.defrag.initDefrag.t3_0_0, 0; -- registerNotify
+    let t5 = newchan github.com_htcat_htcat.defrag.initDefrag.t5_0_0, 0; -- cancelNotify
+    let t7 = newchan github.com_htcat_htcat.defrag.initDefrag.t7_0_0, 0; -- lastOrdinalNotify
+    let t9 = newchan github.com_htcat_htcat.defrag.initDefrag.t9_0_0, 0; -- done
+    call github.com_htcat_htcat.HtCat.startup(t3,t5,t7,t9);
+
+def github.com_htcat_htcat.HtCat.startup(t3,t5,t7,t9):
+    if -- http.Client error
+        spawn github.com_htcat_htcat.defrag.cancel(t5);
+    else
+        if -- non http-200
+            spawn github.com_htcat_htcat.defrag.cancel(t5);
+        else
+            if -- no content length
+                spawn github.com_htcat_htcat.HtCat.startup$1(t3,t5,t7,t9);
+            else
+                if -- invalid content length
+                    spawn github.com_htcat_htcat.defrag.cancel(t5);
+                else
+                    if -- very small fragments
+                        let t2 = newchan github.com_htcat_htcat.newEagerReader.t2_0_0, 0; -- closeNotify
+                        spawn github.com_htcat_htcat.HtCat.startup$1(t3,t5,t7,t9,t2);
+                        spawn github.com_htcat_htcat.eagerReader.WaitClosed(t2);
+                        call github.com_htcat_htcat.HtCat.New#2(t3,t5,t7,t9,t2);
+                    else
+                        -- htcat.nextFragment
+                        if
+--                            call github.com_htcat_htcat.defrag.nextFragment();
+--                            call github.com_htcat_htcat.httpFragGen.nextFragment();
+                            -- return from nextFragment, spawn startup$2 in startup
+                            let t2 = newchan github.com_htcat_htcat.newEagerReader.t2_0_0, 0; -- closeNotify
+                            spawn github.com_htcat_htcat.HtCat.startup$2(t3,t5,t7,t9,t2);
+                            -- return New and spawn cat.get()
+                            call github.com_htcat_htcat.HtCat.New#2(t3,t5,t7,t9,t2);
+                        else
+                            -- d.setLast
+                            select
+                                case send t7; -- lastOrdinalNotify
+                                    send t3; -- inline call github.com_htcat_htcat.defrag.register(t3)
+                                case recv t9; -- done
+                                    send t3; -- inline call github.com_htcat_htcat.defrag.register(t3)
+                            endselect;
+                            -- return from nextFragment, spawn startup$2 in startup
+                            let t2 = newchan github.com_htcat_htcat.newEagerReader.t2_0_0, 0; -- closeNotify
+                            spawn github.com_htcat_htcat.HtCat.startup$2(t3,t5,t7,t9,t2);
+                            -- return New and spawn cat.get()
+                            call github.com_htcat_htcat.HtCat.New#2(t3,t5,t7,t9,t2);
+                        endif;
+                    endif;
+                endif;
+            endif;
+        endif;
+    endif;
+
+def github.com_htcat_htcat.HtCat.New#2(t3,t5,t7,t9,t2):
+    if -- curpos == totalSize
+    else
+        call github.com_htcat_htcat.HtCat.New#3(t3,t5,t7,t9,t2)
+    endif
+
+def github.com_htcat_htcat.HtCat.New#3(t3,t5,t7,t9,t2):
+    if
+        -- exit loop, return back to main.main
+        call main.main#10(t3,t5,t7,t9,t2);
+    else -- background worker
+        spawn github.com_htcat_htcat.HtCat.get(t3,t5,t7,t9,t2);
+    endif
+
+def main.main#10(t3,t5,t7,t9,t2):
+    -- main.main htc.WriteTo(os.Stdout)
+    call github.com_htcat_htcat.HtCat.WriteTo(t3,t5,t7,t9,t2);
+    -- END OF PROGRAM.
+
+def github.com_htcat_htcat.HtCat.WriteTo(t3,t5,t7,t9,t2): -- Impls io.Writer interface
+    if
+    else
+        call github.com_htcat_htcat.HtCat.WriteTo#3(t3,t5,t7,t9,t2)
+    endif;
+
+def github.com_htcat_htcat.HtCat.WriteTo#3(t3,t5,t7,t9,t2): -- for-select
+    if  -- all has finised, exit
+    else
+        select
+            case recv t3; --  registerNotify
+                if
+                    call writeToConsecutive(t3,t5,t7,t9,t2); -- SPECIAL writeToConsecutive with cont
+                else
+                    if
+                        -- not yet
+                        call github.com_htcat_htcat.HtCat.WriteTo#3(t3,t5,t7,t9,t2);
+                    else
+                        -- ERROR
+                        close t9; -- defer call github.com_htcat_htcat.HtCat.WriteTo#5(t3,t5,t7,t9,t2);
+                    endif;
+                endif
+            case recv t5; -- cancelNotify
+                close t9; -- defer call github.com_htcat_htcat.HtCat.WriteTo#5(t3,t5,t7,t9,t2);
+            case recv t7; -- lastOrdinalNotify
+                call github.com_htcat_htcat.HtCat.WriteTo#3(t3,t5,t7,t9,t2); -- continue
+        endselect;
+    endif;
+
+def writeToConsecutive(t3,t5,t7,t9,t2):
+    if -- error, return
+    else
+        send t2; -- attempt to close
+        if -- error, return
+            close t9; -- defer call github.com_htcat_htcat.HtCat.WriteTo#5(t3,t5,t7,t9,t2);
+        else
+            call writeToConsecutive#1(t3,t5,t7,t9,t2);
+        endif;
+    endif;
+
+def writeToConsecutive#1(t3,t5,t7,t9,t2):
+    select
+        case recv t5; -- notifyCancel
+            if
+                -- write error
+                close t9; -- defer call github.com_htcat_htcat.HtCat.WriteTo#5(t3,t5,t7,t9,t2);
+            else
+                -- written fragment, cont
+                call github.com_htcat_htcat.HtCat.WriteTo#3(t3,t5,t7,t9,t2);
+            endif;
+            --call github.com_htcat_htcat.HtCat.WriteTo#3(t3,t5,t7,t9,t2);
+        case tau;
+            if --future
+                if -- write error
+                    close t9; -- defer call github.com_htcat_htcat.HtCat.WriteTo#5(t3,t5,t7,t9,t2);
+                else
+                    -- written fragment, cont
+                    call github.com_htcat_htcat.HtCat.WriteTo#3(t3,t5,t7,t9,t2);
+                endif;
+                --send t2; -- close future fragment on exit
+            else
+                -- return back to WriteTo
+                call github.com_htcat_htcat.HtCat.WriteTo#3(t3,t5,t7,t9,t2);
+            endif;
+    endselect;
+
+def github.com_htcat_htcat.HtCat.startup$2(t3,t5,t7,t9,t2):
+--    spawn github.com_htcat_htcat.eagerReader.buffer(); -- worker
+    send t3; -- inline call github.com_htcat_htcat.defrag.register(t3)
+    recv t2; -- inline call github.com_htcat_htcat.eagerReader.WaitClosed(t2);
+    call github.com_htcat_htcat.HtCat.get(t3,t5,t7,t9,t2);
+
+def github.com_htcat_htcat.defrag.cancel(t5):
+    send t5;
+
+def github.com_htcat_htcat.HtCat.startup$1(t3,t5,t7,t9): -- noParallel function
+    select -- inline call github.com_htcat_htcat.defrag.setLast(t3,t5,t7,t9);
+      case send t7; -- lastOrdinalNotify
+            send t3; -- inline call github.com_htcat_htcat.defrag.register(t3)
+      case recv t9; -- done
+            send t3; -- inline call github.com_htcat_htcat.defrag.register(t3)
+    endselect;
+
+def github.com_htcat_htcat.eagerReader.WaitClosed(t1):
+    recv t1;
+
+def github.com_htcat_htcat.HtCat.get(t3,t5,t7,t9,t2): -- get loop
+    call github.com_htcat_htcat.HtCat.get#1(t3,t5,t7,t9,t2);
+def github.com_htcat_htcat.HtCat.get#1(t3,t5,t7,t9,t2):
+    if
+--      call github.com_htcat_htcat.defrag.nextFragment();
+--      call github.com_htcat_htcat.httpFragGen.nextFragment();
+    else
+--      call github.com_htcat_htcat.defrag.lastAllocated();
+        select -- inline call github.com_htcat_htcat.defrag.setLast(t3,t5,t7,t9);
+        case send t7; -- lastOrdinalNotify
+               send t3; -- inline call github.com_htcat_htcat.defrag.register(t3)
+        case recv t9; -- done
+              --  send t3; -- inline call github.com_htcat_htcat.defrag.register(t3)
+        endselect;
+    endif;
+    if -- error, exit
+        call github.com_htcat_htcat.defrag.cancel(t5)
+    else
+        -- normal case
+        if
+            spawn github.com_htcat_htcat.defrag.cancel(t5);
+        else
+            -- normal case
+            let t2 = newchan github.com_htcat_htcat.newEagerReader.t2_0_0, 0; -- closeNotify
+            send t3; -- inline call github.com_htcat_htcat.defrag.register(t3)
+            recv t2; -- inline call github.com_htcat_htcat.eagerReader.WaitClosed(t2);
+            call github.com_htcat_htcat.HtCat.get#1(t3,t5,t7,t9)
+        endif;
+    endif;
+
+--def github.com_htcat_htcat.HtCat.nextFragment(t3,t5,t7,t9):
+--    if
+----      call github.com_htcat_htcat.defrag.nextFragment();
+----      call github.com_htcat_htcat.httpFragGen.nextFragment();
+--    else
+----      call github.com_htcat_htcat.defrag.lastAllocated();
+--        select -- inline call github.com_htcat_htcat.defrag.setLast(t3,t5,t7,t9);
+--        case send t7; -- lastOrdinalNotify
+--                send t3; -- inline call github.com_htcat_htcat.defrag.register(t3)
+--        case recv t9; -- done
+--                send t3; -- inline call github.com_htcat_htcat.defrag.register(t3)
+--        endselect;
+--    endif;

@@ -1,0 +1,15 @@
+def main.main():
+    let t0 = newchan main.main0.t0_chan0, 0;
+    spawn main.boring(t0);
+    call main.main#3(t0);
+def main.boring(c):
+    call main.boring#1(c);
+def main.boring#1(c):
+    tau;
+    call main.boring#1(c);
+def main.main#1(t0):
+    recv t0;
+    call main.main#3(t0);
+def main.main#3(t0):
+    ifFor (int t13 = 0; (t13<5); t13 = t13 + 1) then call main.main#1(t0); else call main.main#2(t0); endif;
+def main.main#2(t0): tau

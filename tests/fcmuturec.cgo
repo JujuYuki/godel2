@@ -1,0 +1,7 @@
+def t0() : let a = newchan ty, 0 ; 
+    	   call t(a);
+
+def t(x): tau; call s(x);
+
+
+def s(x): tau; call t(x);

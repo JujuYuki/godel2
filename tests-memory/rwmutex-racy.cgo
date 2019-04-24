@@ -1,0 +1,15 @@
+def t0() : letsync a rwmutex ;
+	   letmem b;
+	   spawn t1(a,b);
+           spawn t2(a,b);
+
+def t1(m,x) : lock m;
+	      write x;
+              unlock m;
+              rlock m;
+              read x;
+              runlock m;
+
+def t2(m,x): rlock m;
+	     write x;
+             runlock m;

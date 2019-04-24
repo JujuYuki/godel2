@@ -1,0 +1,27 @@
+
+def t0() : let a = newchan ty, 0 ; 
+            spawn f(a;0);
+	    recv a;
+
+def f(x;n) : ifE (n > 10) then send x;
+		 else call f(x;n-1);
+		 endif;
+	
+
+def g(x;n) : ifE (n>10) then 
+                ifE (n > 10) then send x; else send x; endif
+               else
+                 call g(x;n-1);
+               endif;
+
+def r(x;n) : ifE (n>10) then
+               select 
+	          case send x;
+                  case send x;
+               endselect;
+             else
+               select
+                 case call r(x;n-1);
+                 case call r(x;n-2);
+               endselect;
+             endif;

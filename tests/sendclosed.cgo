@@ -1,0 +1,11 @@
+def t0() : let a = newchan ty, 0 ; 
+	   spawn t1(a);
+	   spawn t2(a);
+    	   close a;
+
+def t1(x): recv x; call t1(x);
+
+def t2(x): if   close x; call t2(x);
+    	   else send x; call t2(x);
+	   endif;
+	   

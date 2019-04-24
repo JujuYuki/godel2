@@ -1,0 +1,15 @@
+
+
+def t0() : call t1();
+
+def t1(a) : if 
+                ifFor (int i = 0 ; i < x; i++) then
+                 close a
+                else 
+                 close a endif;
+            else 
+                ifFor (int i = 0 ; i < y; i++) then
+                 close a
+                else close a endif; endif;
+                 
+

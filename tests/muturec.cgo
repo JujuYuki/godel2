@@ -1,0 +1,12 @@
+def t0() : let a = newchan ty, 0 ; 
+    	   call t(a);
+
+def t(x): let a = newchan ty, 0;
+	  spawn t(a);
+	  spawn s(x);
+	  recv x;
+
+def s(x): let a = newchan ty, 0;
+	  spawn s(a);
+	  spawn t(x);
+	  send x;

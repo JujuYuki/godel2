@@ -1,0 +1,34 @@
+
+def main():
+    let beer = newchan ty, 4;
+    let chips = newchan ty, 4;
+    let cars = newchan ty, 4;
+    
+    spawn producer(beer);
+    spawn producer(chips);
+    spawn producer(cars);
+
+    spawn consummer(beer,chips);
+    spawn consummer(chips,cars);
+
+
+def producer(x) :
+    if
+	send x;
+        call producer(x)
+    else
+	close x;
+    endif;
+
+
+
+def consummer(x,y):
+    select
+	case recv x;
+	case recv y;
+	case tau;
+    endselect;
+    call consummer(x,y)
+    
+	
+

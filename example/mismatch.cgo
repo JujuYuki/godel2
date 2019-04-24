@@ -1,0 +1,18 @@
+def main.main():
+    let t0 = newchan main.main.t0_0_0, 0;
+    let t1 = newchan main.main.t1_0_0, 0;
+    spawn main.Send(t0);
+    spawn main.Recv(t0, t1);
+    spawn main.Recv(t0, t1);
+    --spawn main.Work();
+    recv t1;
+    recv t1;
+def main.Send(t0):
+    send t0;
+def main.Recv(t0, t1):
+    recv t0;
+    send t1;
+--def main.Work():
+--    call main.Work#1();
+--def main.Work#1():
+--    call main.Work#1();

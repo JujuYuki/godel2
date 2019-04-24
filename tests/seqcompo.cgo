@@ -1,0 +1,18 @@
+def t0(): let c = newchan ty, 0 ;
+    	  call t1(c);
+    	  if 
+    	     call t(c);
+	     call s(c);
+	  else
+	     call t1(c);
+	     call t2(c);
+	  endif;
+	  send c;
+
+def t1(x): send x;
+
+def t(x): send x;
+
+def t2(x): send x;
+
+def s(x): recv x;

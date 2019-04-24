@@ -1,0 +1,16 @@
+def main():
+    let t0= newchan a, 0;
+    spawn function(t0);
+    call unguardedrec(t0);
+    
+def function(c):
+    send c;
+
+
+def unguardedrec(c):
+tau;
+    call second(c);
+
+def second(c):
+    call unguardedrec(c);
+

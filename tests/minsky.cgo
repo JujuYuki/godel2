@@ -1,0 +1,54 @@
+def main() : 
+    -- let yinc = newchan t, 0;
+    -- let ydec = newchan t, 0;
+    -- let yzero = newchan t, 0;
+    -- let ynz = newchan t, 0;
+    let xinc = newchan t, 0;
+    let xdec = newchan t, 0;
+    let xzero = newchan t, 0;
+    let xnz = newchan t, 0;
+    spawn incinf(xinc,xdec,xzero,xnz);
+    -- spawn incinf(yinc,ydec,yzero,ynz);	
+    spawn counter(xinc,xdec,xzero,xnz);
+    -- spawn counter(yinc,ydec,yzero,ynz);
+
+
+def incinf(xinc,xdec,xzero,xnz):
+    send xinc;
+    call incinf(xinc,xdec,xzero,xnz);
+
+
+def counter(xinc,xdec,xzero,xnz) :
+ let yinc = newchan t, 0;
+ let ydec = newchan t, 0;
+ let yzero = newchan t, 0;
+ let ynz = newchan t, 0;
+ spawn Zero(xinc,xdec,xzero,xnz,yinc,ydec,yzero,ynz);
+ call counter(yinc,ydec,yzero,ynz);
+
+
+def Zero(xinc,xdec,xzero,xnz,yinc,ydec,yzero,ynz): 
+    select
+        case recv xinc;
+	     call One(xinc,xdec,xzero,xnz,yinc,ydec,yzero,ynz);
+	case send xzero;
+	     call Zero(xinc,xdec,xzero,xnz,yinc,ydec,yzero,ynz);
+    endselect;
+
+
+def One(xinc,xdec,xzero,xnz,yinc,ydec,yzero,ynz):
+    select
+	case recv xinc;
+	     send yinc;
+	     call One(xinc,xdec,xzero,xnz,yinc,ydec,yzero,ynz);
+	case recv xdec;
+	     select
+	     case recv yzero;
+	          call Zero(xinc,xdec,xzero,xnz,yinc,ydec,yzero,ynz)
+	     case recv ynz;
+	     	  send ydec;
+		  call One(xinc,xdec,xzero,xnz,yinc,ydec,yzero,ynz);
+	     endselect;
+	case send xnz;
+	     call One(xinc,xdec,xzero,xnz,yinc,ydec,yzero,ynz);
+    endselect;

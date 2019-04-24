@@ -1,0 +1,7 @@
+def t0() : if 
+	     let a = newchan ty, 0;	   	   
+	   else 
+	     let a = newchan ty, 1;	
+	   endif;
+	   send a;
+

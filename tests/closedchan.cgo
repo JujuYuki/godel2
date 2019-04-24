@@ -1,0 +1,6 @@
+def t0() : let a = newchan ty, 0 ; 
+    	   close a;
+	   call t1(a);
+
+def t1(x): recv x; call t1(x);
+	   

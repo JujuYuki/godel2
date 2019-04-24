@@ -1,0 +1,13 @@
+def t0() : letsync a mutex ;
+	   letmem b;
+	   spawn t1(a,b);
+	   unlock a;
+	   write b;
+           unlock a;
+           lock a;
+           read b;
+           unlock a;
+
+def t1(x,y): lock x;
+	     write y;
+             unlock x;

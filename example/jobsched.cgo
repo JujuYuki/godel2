@@ -1,0 +1,18 @@
+def main.main():
+    let t0 = newchan main.main.t0_0_0, 0;
+    let t1 = newchan main.main.t1_0_0, 0;
+    spawn main.worker(t0, t1);
+    spawn main.worker(t0, t1);
+    call main.producer(t0, t1);
+def main.producer(q, done):
+    call main.producer#3(q, done);
+def main.producer#3(q, done):
+    --call main.morejob();
+    if send q; call main.producer#3(q, done); else close done; endif;
+def main.worker(jobQueue, done):
+    call main.worker#1(jobQueue, done);
+def main.worker#1(jobQueue, done):
+    select
+      case recv jobQueue; call main.worker#1(jobQueue, done); 
+      case recv done; 
+    endselect;

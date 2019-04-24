@@ -1,0 +1,13 @@
+def t0() : letmem b;
+           let a = newchan ty, 1 ;
+	   spawn t1(a,b);
+	   send a;
+	   write b;
+           recv a;
+           send a;
+           read b;
+           recv a;
+
+def t1(x,y): send x;
+	     write y;
+             recv x;

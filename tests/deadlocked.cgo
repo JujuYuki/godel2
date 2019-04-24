@@ -1,0 +1,6 @@
+def t0() : let a = newchan ty, 0 ; 
+    	   let b = newchan ty, 0 ; 
+	   	   send b;
+		   send a;	   
+
+	   

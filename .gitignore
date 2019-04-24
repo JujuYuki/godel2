@@ -1,0 +1,8 @@
+dist/
+*.hi
+*.o
+.stack-work/
+model.crl2
+go-model.lps
+go-model.lts
+*.mcf

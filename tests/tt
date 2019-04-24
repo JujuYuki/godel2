@@ -1,0 +1,31 @@
+P [D "t0" [] (Seq [NewChan "a" "ty" 0,Call "t" ["a"],Call "s" ["a"],Zero]),
+   D "t" ["x"] (Seq [S "x",Zero]),
+   D "s" ["x"] (Seq [R "x",Zero])]
+
+
+
+P [D "st0a" [] (Seq [R "t0a",Seq [Zero,Zero]]),
+   D "t0" [] (Seq [NewChan "t0a" "ty" 0,Seq [Call "tt0a" [],Seq [Call "st0a" [],Seq [Zero,Zero]]]]),
+   D "tt0a" [] (Seq [S "t0a",Seq [Zero,Zero]])]
+
+
+
+
+P [D "t0" [] (Seq [Call "t" ["a"],Call "s" ["a"],Zero]),
+   D "t" ["x"] (Seq [S "x",Zero]),
+   D "s" ["x"] (Seq [R "x",Zero])]
+
+
+P [D "sa" [] (Seq [R "a",Seq [Zero,Zero]]),
+   D "t0" [] (Call "tanew" []),
+   D "ta" [] (Seq [S "a",Seq [Zero,Zero]]),
+   D "tanew" [] (Seq [S "a",Seq [Zero,Zero],Seq [Seq [Call "sa" [],Seq [Zero,Zero]]]])]
+
+
+
+P [D "st0c" [] (R "t0c"),D "t0" [] (Seq [NewChan "t0c" "ty" 0,If TT
+
+
+(Seq [Seq [Call "tt0c" [],Call "st0c" []],S "t0c"]
+
+) (Seq [Seq [Call "tt0c" [],Call "tt0c" []],S "t0c"])]),D "tt0c" [] (S "t0c")]

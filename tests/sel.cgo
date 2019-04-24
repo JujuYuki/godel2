@@ -1,0 +1,8 @@
+def t0() : let a = newchan ty, 0 ; 
+    	   let b = newchan ty, 0 ; 
+	   select 
+	   	  case send a; send a;
+	   	  case send b; send b;
+		  case tau; recv b;
+	   endselect;
+	   

@@ -1,0 +1,29 @@
+def t0() : let a = newchan ty, 0 ; 
+    	   let b = newchan ty, 0 ; 
+	   let c = newchan ty, 0 ;
+	   spawn buyer(a,b,c);
+	   spawn seller(a,b);
+	   spawn shipper(c)
+
+
+def buyer(x,y,z): if  send x;
+    		      recv x;
+    		      call buyer(x,y,z)
+    		  else
+		      send y;
+		      send z;
+		  endif;
+
+def seller(x,y):  select 
+	   	  case recv x; send x; call seller(x,y)
+	   	  case recv y;
+	   	  endselect;
+
+def shipper(z): recv z;
+
+-- def shipper(z): select case recv z;
+--     		       case tau;
+-- 		endselect;
+
+
+	   

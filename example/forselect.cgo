@@ -1,0 +1,22 @@
+def main.main():
+    let t0 = newchan main.main.t0_0_0, 0;
+    let t1 = newchan main.main.t1_0_0, 0;
+    let t2 = newchan main.main.t2_0_0, 0;
+    spawn main.sel1(t1, t2, t0);
+    spawn main.sel2(t1, t2, t0);
+    recv t0;
+    recv t0;
+def main.sel1(ch1, ch2, done):
+    call main.sel1#1(ch1, ch2, done);
+def main.sel1#1(t1, t2, t0):
+    select
+      case recv t1; send t0; 
+      case send t2; call main.sel1#1(t1, t2, t0); 
+    endselect;
+def main.sel2(ch1, ch2, done):
+    call main.sel2#1(ch1, ch2, done);
+def main.sel2#1(t1, t2, t0):
+    select
+      case recv t2; call main.sel2#1(t1, t2, t0); 
+      case send t1; send t0; 
+    endselect;

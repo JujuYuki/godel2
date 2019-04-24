@@ -1,0 +1,18 @@
+def main.main():
+    let t0 = newchan main.main.t0_0_0, 0;
+    call main.main#3(t0);
+def main.main#3(t0):
+    if
+        tau;
+        let t1 = newchan main.main.t1_0_0, 0;
+        spawn main.adder(t0, t1);
+        call main.main#3(t1);
+    else
+        tau; send t0; recv t1;
+    endif;
+def main.adder(in, out):
+    call main.adder#1(in, out);
+def main.adder#1(in, out):
+    recv in;
+    send out;
+    call main.adder#1(in, out);

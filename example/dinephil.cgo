@@ -1,0 +1,30 @@
+def main.main():
+    let t0 = newchan main.main.t0_0_0, 0;
+    let t1 = newchan main.main.t1_0_0, 0;
+    let t2 = newchan main.main.t2_0_0, 0;
+    spawn main.phil(t0, t1);
+    spawn main.phil(t1, t2);
+    spawn main.phil(t2, t0);
+    spawn main.Fork(t0);
+    spawn main.Fork(t1);
+    spawn main.Fork(t2);
+def main.Fork(fork):
+    call main.Fork#1(fork);
+def main.Fork#1(fork):
+    send fork;
+    recv fork;
+    call main.Fork#1(fork);
+def main.phil(fork1, fork2):
+    call main.phil#1(fork1, fork2);
+def main.phil#1(fork1, fork2):
+    select
+      case recv fork1; select
+      case recv fork2; send fork1; send fork2; call main.phil#1(fork1, fork2); 
+      case tau; send fork1; call main.phil#1(fork1, fork2); 
+    endselect; 
+      case recv fork2; select
+      case recv fork1; send fork2; send fork1; call main.phil#1(fork1, fork2); 
+      case tau; send fork2; call main.phil#1(fork1, fork2); 
+    endselect; 
+    endselect;
+

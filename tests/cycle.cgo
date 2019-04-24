@@ -1,0 +1,13 @@
+def t0() : let a = newchan ty, 0 ; 
+    	   let b = newchan ty, 0 ; 
+	   spawn t1(a,b);
+	   spawn t2(a,b);
+	   
+
+def t1(x,y): if recv x; recv y; call t1(x,y)
+    	     else tau; call t1(x,y)
+	     endif;
+	     
+def t2(x,y): if send x; send y; call t2(x,y)
+    	     else tau; call t2(x,y)
+	     endif;

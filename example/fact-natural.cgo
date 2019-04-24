@@ -1,0 +1,12 @@
+def main.main():
+    let t0 = newchan main.main.t0_0_0, 0;
+    spawn main.fact(t0);
+    recv t0;
+def main.fact(results):
+    if send results;
+     else 
+     let t1 = newchan main.fact.t1_0_0, 0;
+     spawn main.fact(t1);
+     recv t1;
+     send results;
+     endif;

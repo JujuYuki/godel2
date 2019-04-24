@@ -1,0 +1,31 @@
+def t0() : let u = newchan ty, 0;
+           send u;
+           if 
+    	      let a = newchan ty, 0 ; 
+	      send a;
+	      spawn t2(a,u,a);
+	   else
+	      let a = newchan ty, 0;
+	      send a;
+	      spawn t1();
+	      send a;
+	   endif;
+
+def t1() : if 
+    	      let a = newchan ty, 0 ; 
+	      send a;
+	   else
+	      let a = newchan ty, 0;
+	      send a;
+	      spawn t2(a,a,a);
+	   endif;
+	   send a;
+
+
+def t2(x,y,z): 
+           select 
+	   	  case send x; let a = newchan ty, 0; send a;
+	   	  case send y; let a = newchan ty, 0; send a;
+		  case send z; let a = newchan ty, 0; send a;
+		  case recv z; let a = newchan ty, 0; send a;
+	   endselect;

@@ -1,0 +1,2901 @@
+def main.main():
+    call fmt.Println();
+def unicode_utf8.init():
+    tau;
+def errors.New():
+    tau;
+def strconv.init():
+    call errors.New();
+    call errors.New();
+def syscall.init():
+    tau;
+def unsafe.init():
+    tau;
+def internal_race.init():
+    tau;
+def math.init#1():
+    call math.init#1#3();
+def math.init#1#1():
+    call math.init#1#3();
+def math.init#1#2():
+    tau;
+def math.init#1#3():
+    ifFor (int t11 = 2; (t11<70); t11 = t11 + 1) then call math.init#1#1(); else call math.init#1#2(); endif;
+def math.init():
+    call math.init#1();
+def runtime_internal_sys.init():
+    tau;
+def io.init():
+    call errors.New();
+    call errors.New();
+    call errors.New();
+    call errors.New();
+    call errors.New();
+    call errors.New();
+    call errors.New();
+    call errors.New();
+def sync_atomic.init():
+    tau;
+def runtime_internal_atomic.init():
+    tau;
+def fmt.init():
+    call errors.New();
+    call errors.New();
+def errors.init():
+    tau;
+def os.fixLongPath():
+    tau;
+def syscall.ByteSliceFromString():
+    call syscall.ByteSliceFromString#3();
+def syscall.ByteSliceFromString#1():
+    if call syscall.ByteSliceFromString#4(); else call syscall.ByteSliceFromString#5(); endif;
+def syscall.ByteSliceFromString#2():
+    tau;
+def syscall.ByteSliceFromString#3():
+    ifFor (int t6 = 0; (t6<t7); t6 = t6 + 1) then call syscall.ByteSliceFromString#1(); else call syscall.ByteSliceFromString#2(); endif;
+def syscall.ByteSliceFromString#4():
+    tau;
+def syscall.ByteSliceFromString#5():
+    call syscall.ByteSliceFromString#3();
+def syscall.BytePtrFromString():
+    call syscall.ByteSliceFromString();
+    if call syscall.BytePtrFromString#1(); else call syscall.BytePtrFromString#2(); endif;
+def syscall.BytePtrFromString#1():
+    tau;
+def syscall.BytePtrFromString#2():
+    tau;
+def syscall.errnoErr():
+    if call syscall.errnoErr#1(); else call syscall.errnoErr#3(); endif;
+def syscall.errnoErr#1():
+    tau;
+def syscall.errnoErr#2():
+    tau;
+def syscall.errnoErr#3():
+    if call syscall.errnoErr#2(); else call syscall.errnoErr#5(); endif;
+def syscall.errnoErr#4():
+    tau;
+def syscall.errnoErr#5():
+    if call syscall.errnoErr#4(); else call syscall.errnoErr#7(); endif;
+def syscall.errnoErr#6():
+    tau;
+def syscall.errnoErr#7():
+    if call syscall.errnoErr#6(); else call syscall.errnoErr#8(); endif;
+def syscall.errnoErr#8():
+    tau;
+def syscall.readlinkat():
+    call syscall.BytePtrFromString();
+    if call syscall.readlinkat#1(); else call syscall.readlinkat#2(); endif;
+def syscall.readlinkat#1():
+    tau;
+def syscall.readlinkat#2():
+    if call syscall.readlinkat#3(); else call syscall.readlinkat#5(); endif;
+def syscall.readlinkat#3():
+    call syscall.readlinkat#4();
+def syscall.readlinkat#4():
+    if call syscall.readlinkat#6(); else call syscall.readlinkat#7(); endif;
+def syscall.readlinkat#5():
+    call syscall.readlinkat#4();
+def syscall.readlinkat#6():
+    call syscall.errnoErr();
+    call syscall.readlinkat#7();
+def syscall.readlinkat#7():
+    tau;
+def syscall.Readlink():
+    call syscall.readlinkat();
+def os.fixCount():
+    if call os.fixCount#1(); else call os.fixCount#2(); endif;
+def os.fixCount#1():
+    call os.fixCount#2();
+def os.fixCount#2():
+    tau;
+def os.Readlink():
+    call os.Readlink#1();
+def os.Readlink#1():
+    call os.fixLongPath();
+    call syscall.Readlink();
+    call os.fixCount();
+    if call os.Readlink#2(); else call os.Readlink#3(); endif;
+def os.Readlink#2():
+    tau;
+def os.Readlink#3():
+    if call os.Readlink#4(); else call os.Readlink#5(); endif;
+def os.Readlink#4():
+    tau;
+def os.Readlink#5():
+    call os.Readlink#1();
+def os.init$1():
+    if call os.init$1#2(); else call os.init$1#4(); endif;
+def os.init$1#1():
+    call os.Readlink();
+def os.init$1#2():
+    call os.init$1#1();
+def os.init$1#3():
+    call os.init$1#1();
+def os.init$1#4():
+    if call os.init$1#2(); else call os.init$1#5(); endif;
+def os.init$1#5():
+    if call os.init$1#3(); else call os.init$1#7(); endif;
+def os.init$1#6():
+    call os.init$1#1();
+def os.init$1#7():
+    if call os.init$1#6(); else call os.init$1#9(); endif;
+def os.init$1#8():
+    call os.init$1#1();
+def os.init$1#9():
+    if call os.init$1#8(); else call os.init$1#10(); endif;
+def os.init$1#10():
+    call errors.New();
+def os.NewFile():
+    if call os.NewFile#1(); else call os.NewFile#2(); endif;
+def os.NewFile#1():
+    tau;
+def os.NewFile#2():
+    tau;
+def os.init#1():
+    if call os.init#1#1(); else call os.init#1#2(); endif;
+def os.init#1#1():
+    tau;
+def os.init#1#2():
+    tau;
+def os.init():
+    call errors.New();
+    call errors.New();
+    call errors.New();
+    call errors.New();
+    call errors.New();
+    call errors.New();
+    call os.init$1();
+    call os.NewFile();
+    call os.NewFile();
+    call os.NewFile();
+    call os.init#1();
+def internal_race.Acquire():
+    tau;
+def sync.Lock():
+    if call sync.Lock#1(); else call sync.Lock#2(); endif;
+def sync.Lock#1():
+    if call sync.Lock#3(); else call sync.Lock#4(); endif;
+def sync.Lock#2():
+    call sync.Lock#5();
+def sync.Lock#3():
+    call internal_race.Acquire();
+    call sync.Lock#4();
+def sync.Lock#4():
+    tau;
+def sync.Lock#5():
+    if call sync.Lock#6(); else call sync.Lock#7(); endif;
+def sync.Lock#6():
+    if call sync.Lock#8(); else call sync.Lock#9(); endif;
+def sync.Lock#7():
+    if call sync.Lock#15(); else call sync.Lock#16(); endif;
+def sync.Lock#8():
+    if call sync.Lock#11(); else call sync.Lock#14(); endif;
+def sync.Lock#9():
+    call sync.Lock#7();
+def sync.Lock#10():
+    call sync.Lock#11();
+def sync.Lock#11():
+    call sync.Lock#5();
+def sync.Lock#12():
+    tau;
+def sync.Lock#13():
+    tau;
+def sync.Lock#14():
+    tau;
+def sync.Lock#15():
+    if call sync.Lock#17(); else call sync.Lock#18(); endif;
+def sync.Lock#16():
+    if call sync.Lock#19(); else call sync.Lock#5(); endif;
+def sync.Lock#17():
+    call sync.Lock#18();
+def sync.Lock#18():
+    call sync.Lock#16();
+def sync.Lock#19():
+    if call sync.Lock#20(); else call sync.Lock#21(); endif;
+def sync.Lock#20():
+    if call sync.Lock#22(); else call sync.Lock#23(); endif;
+def sync.Lock#21():
+    call sync.Lock#5();
+def sync.Lock#22():
+    call internal_race.Acquire();
+    call sync.Lock#23();
+def sync.Lock#23():
+    tau;
+def sync.Do():
+    if call sync.Do#1(); else call sync.Do#2(); endif;
+def sync.Do#1():
+    tau;
+def sync.Do#2():
+    call sync.Lock();
+    if call sync.Do#4(); else call sync.Do#5(); endif;
+def sync.Do#3():
+    tau;
+def sync.Do#4():
+    call sync.Do#5();
+def sync.Do#5():
+    tau;
+def internal_race.Disable():
+    tau;
+def internal_race.Enable():
+    tau;
+def sync.RLock():
+    if call sync.RLock#1(); else call sync.RLock#2(); endif;
+def sync.RLock#1():
+    call internal_race.Disable();
+    call sync.RLock#2();
+def sync.RLock#2():
+    if call sync.RLock#3(); else call sync.RLock#4(); endif;
+def sync.RLock#3():
+    call sync.RLock#4();
+def sync.RLock#4():
+    if call sync.RLock#5(); else call sync.RLock#6(); endif;
+def sync.RLock#5():
+    call internal_race.Enable();
+    call internal_race.Acquire();
+    call sync.RLock#6();
+def sync.RLock#6():
+    tau;
+def syscall.Getenv():
+    call sync.Do();
+    if call syscall.Getenv#1(); else call syscall.Getenv#2(); endif;
+def syscall.Getenv#1():
+    tau;
+def syscall.Getenv#2():
+    call sync.RLock();
+    if call syscall.Getenv#5(); else call syscall.Getenv#4(); endif;
+def syscall.Getenv#3():
+    tau;
+def syscall.Getenv#4():
+    tau;
+def syscall.Getenv#5():
+    call syscall.Getenv#8();
+def syscall.Getenv#6():
+    if call syscall.Getenv#9(); else call syscall.Getenv#10(); endif;
+def syscall.Getenv#7():
+    tau;
+def syscall.Getenv#8():
+    ifFor (int t23 = 0; (t23<t24); t23 = t23 + 1) then call syscall.Getenv#6(); else call syscall.Getenv#7(); endif;
+def syscall.Getenv#9():
+    tau;
+def syscall.Getenv#10():
+    call syscall.Getenv#8();
+def time.init():
+    call errors.New();
+    call errors.New();
+    call errors.New();
+    call syscall.Getenv();
+    call errors.New();
+def main.init():
+    tau;
+def sync.init#1():
+    tau;
+def sync.init#2():
+    tau;
+def sync.init():
+    call sync.init#1();
+    call sync.init#2();
+def sync.indexLocal():
+    tau;
+def internal_race.Release():
+    tau;
+def sync.Unlock():
+    if call sync.Unlock#1(); else call sync.Unlock#2(); endif;
+def sync.Unlock#1():
+    call internal_race.Release();
+    call sync.Unlock#2();
+def sync.Unlock#2():
+    if call sync.Unlock#3(); else call sync.Unlock#4(); endif;
+def sync.Unlock#3():
+    call sync.Unlock#4();
+def sync.Unlock#4():
+    call sync.Unlock#5();
+def sync.Unlock#5():
+    if call sync.Unlock#6(); else call sync.Unlock#8(); endif;
+def sync.Unlock#6():
+    tau;
+def sync.Unlock#7():
+    if call sync.Unlock#9(); else call sync.Unlock#10(); endif;
+def sync.Unlock#8():
+    tau;
+def sync.Unlock#9():
+    tau;
+def sync.Unlock#10():
+    call sync.Unlock#5();
+def sync.getSlow():
+    call sync.getSlow#3();
+def sync.getSlow#1():
+    call sync.indexLocal();
+    call sync.Lock();
+    if call sync.getSlow#4(); else call sync.getSlow#5(); endif;
+def sync.getSlow#2():
+    tau;
+def sync.getSlow#3():
+    ifFor (int t19 = 0; (t19<t20); t19 = t19 + 1) then call sync.getSlow#1(); else call sync.getSlow#2(); endif;
+def sync.getSlow#4():
+    call sync.Unlock();
+    call sync.getSlow#2();
+def sync.getSlow#5():
+    call sync.Unlock();
+    call sync.getSlow#3();
+def sync.poolRaceAddr():
+    tau;
+def sync.pinSlow():
+    call sync.Lock();
+    if call sync.pinSlow#2(); else call sync.pinSlow#3(); endif;
+def sync.pinSlow#1():
+    tau;
+def sync.pinSlow#2():
+    call sync.indexLocal();
+def sync.pinSlow#3():
+    if call sync.pinSlow#4(); else call sync.pinSlow#5(); endif;
+def sync.pinSlow#4():
+    call sync.pinSlow#5();
+def sync.pinSlow#5():
+    tau;
+def sync.pin():
+    if call sync.pin#1(); else call sync.pin#2(); endif;
+def sync.pin#1():
+    call sync.indexLocal();
+def sync.pin#2():
+    call sync.pinSlow();
+def sync.Get():
+    if call sync.Get#1(); else call sync.Get#2(); endif;
+def sync.Get#1():
+    call internal_race.Disable();
+    call sync.Get#2();
+def sync.Get#2():
+    call sync.pin();
+    if call sync.Get#3(); else call sync.Get#4(); endif;
+def sync.Get#3():
+    call sync.Lock();
+    if call sync.Get#5(); else call sync.Get#6(); endif;
+def sync.Get#4():
+    if call sync.Get#8(); else call sync.Get#9(); endif;
+def sync.Get#5():
+    call sync.Get#6();
+def sync.Get#6():
+    call sync.Unlock();
+    if call sync.Get#7(); else call sync.Get#4(); endif;
+def sync.Get#7():
+    call sync.getSlow();
+    call sync.Get#4();
+def sync.Get#8():
+    call internal_race.Enable();
+    if call sync.Get#10(); else call sync.Get#9(); endif;
+def sync.Get#9():
+    if call sync.Get#13(); else call sync.Get#12(); endif;
+def sync.Get#10():
+    call sync.poolRaceAddr();
+    call internal_race.Acquire();
+    call sync.Get#9();
+def sync.Get#11():
+    call sync.Get#12();
+def sync.Get#12():
+    tau;
+def sync.Get#13():
+    tau;
+def fmt.clearflags():
+    tau;
+def fmt.newPrinter():
+    call sync.Get();
+    call fmt.init();
+def fmt.WriteByte():
+    tau;
+def unicode_utf8.RuneCountInString():
+    call unicode_utf8.RuneCountInString#3();
+def unicode_utf8.RuneCountInString#1():
+    if call unicode_utf8.RuneCountInString#5(); else call unicode_utf8.RuneCountInString#6(); endif;
+def unicode_utf8.RuneCountInString#2():
+    tau;
+def unicode_utf8.RuneCountInString#3():
+    ifFor (int t4 = 0; (t4<t0); t4 = t4 + 1) then call unicode_utf8.RuneCountInString#1(); else call unicode_utf8.RuneCountInString#2(); endif;
+def unicode_utf8.RuneCountInString#4():
+    call unicode_utf8.RuneCountInString#3();
+def unicode_utf8.RuneCountInString#5():
+    call unicode_utf8.RuneCountInString#4();
+def unicode_utf8.RuneCountInString#6():
+    if call unicode_utf8.RuneCountInString#7(); else call unicode_utf8.RuneCountInString#8(); endif;
+def unicode_utf8.RuneCountInString#7():
+    call unicode_utf8.RuneCountInString#4();
+def unicode_utf8.RuneCountInString#8():
+    if call unicode_utf8.RuneCountInString#9(); else call unicode_utf8.RuneCountInString#10(); endif;
+def unicode_utf8.RuneCountInString#9():
+    call unicode_utf8.RuneCountInString#4();
+def unicode_utf8.RuneCountInString#10():
+    if call unicode_utf8.RuneCountInString#11(); else call unicode_utf8.RuneCountInString#14(); endif;
+def unicode_utf8.RuneCountInString#11():
+    call unicode_utf8.RuneCountInString#12();
+def unicode_utf8.RuneCountInString#12():
+    call unicode_utf8.RuneCountInString#4();
+def unicode_utf8.RuneCountInString#13():
+    if call unicode_utf8.RuneCountInString#12(); else call unicode_utf8.RuneCountInString#15(); endif;
+def unicode_utf8.RuneCountInString#14():
+    tau;
+def unicode_utf8.RuneCountInString#15():
+    if call unicode_utf8.RuneCountInString#16(); else call unicode_utf8.RuneCountInString#18(); endif;
+def unicode_utf8.RuneCountInString#16():
+    call unicode_utf8.RuneCountInString#12();
+def unicode_utf8.RuneCountInString#17():
+    if call unicode_utf8.RuneCountInString#12(); else call unicode_utf8.RuneCountInString#19(); endif;
+def unicode_utf8.RuneCountInString#18():
+    tau;
+def unicode_utf8.RuneCountInString#19():
+    if call unicode_utf8.RuneCountInString#20(); else call unicode_utf8.RuneCountInString#21(); endif;
+def unicode_utf8.RuneCountInString#20():
+    call unicode_utf8.RuneCountInString#12();
+def unicode_utf8.RuneCountInString#21():
+    tau;
+def fmt.WriteString():
+    tau;
+def fmt.writePadding():
+    if call fmt.writePadding#1(); else call fmt.writePadding#2(); endif;
+def fmt.writePadding#1():
+    tau;
+def fmt.writePadding#2():
+    if call fmt.writePadding#3(); else call fmt.writePadding#4(); endif;
+def fmt.writePadding#3():
+    call fmt.writePadding#4();
+def fmt.writePadding#4():
+    if call fmt.writePadding#5(); else call fmt.writePadding#6(); endif;
+def fmt.writePadding#5():
+    call fmt.writePadding#6();
+def fmt.writePadding#6():
+    call fmt.writePadding#7();
+def fmt.writePadding#7():
+    if call fmt.writePadding#8(); else call fmt.writePadding#9(); endif;
+def fmt.writePadding#8():
+    call fmt.writePadding#7();
+def fmt.writePadding#9():
+    tau;
+def fmt.padString():
+    if call fmt.padString#3(); else call fmt.padString#1(); endif;
+def fmt.padString#1():
+    call fmt.WriteString();
+def fmt.padString#2():
+    call unicode_utf8.RuneCountInString();
+    if call fmt.padString#6(); else call fmt.padString#4(); endif;
+def fmt.padString#3():
+    tau;
+def fmt.padString#4():
+    call fmt.writePadding();
+    call fmt.WriteString();
+    call fmt.padString#5();
+def fmt.padString#5():
+    tau;
+def fmt.padString#6():
+    call fmt.WriteString();
+    call fmt.writePadding();
+    call fmt.padString#5();
+def unicode_utf8.EncodeRune():
+    if call unicode_utf8.EncodeRune#1(); else call unicode_utf8.EncodeRune#3(); endif;
+def unicode_utf8.EncodeRune#1():
+    tau;
+def unicode_utf8.EncodeRune#2():
+    tau;
+def unicode_utf8.EncodeRune#3():
+    if call unicode_utf8.EncodeRune#2(); else call unicode_utf8.EncodeRune#5(); endif;
+def unicode_utf8.EncodeRune#4():
+    call unicode_utf8.EncodeRune#6();
+def unicode_utf8.EncodeRune#5():
+    if call unicode_utf8.EncodeRune#4(); else call unicode_utf8.EncodeRune#7(); endif;
+def unicode_utf8.EncodeRune#6():
+    tau;
+def unicode_utf8.EncodeRune#7():
+    if call unicode_utf8.EncodeRune#9(); else call unicode_utf8.EncodeRune#10(); endif;
+def unicode_utf8.EncodeRune#8():
+    if call unicode_utf8.EncodeRune#6(); else call unicode_utf8.EncodeRune#11(); endif;
+def unicode_utf8.EncodeRune#9():
+    call unicode_utf8.EncodeRune#10();
+def unicode_utf8.EncodeRune#10():
+    if call unicode_utf8.EncodeRune#4(); else call unicode_utf8.EncodeRune#8(); endif;
+def unicode_utf8.EncodeRune#11():
+    tau;
+def fmt.WriteRune():
+    if call fmt.WriteRune#1(); else call fmt.WriteRune#2(); endif;
+def fmt.WriteRune#1():
+    tau;
+def fmt.WriteRune#2():
+    call fmt.WriteRune#5();
+def fmt.WriteRune#3():
+    call fmt.WriteRune#5();
+def fmt.WriteRune#4():
+    call unicode_utf8.EncodeRune();
+def fmt.WriteRune#5():
+    if call fmt.WriteRune#3(); else call fmt.WriteRune#4(); endif;
+def fmt.truncate():
+    if call fmt.truncate#1(); else call fmt.truncate#2(); endif;
+def fmt.truncate#1():
+    call fmt.truncate#3();
+def fmt.truncate#2():
+    tau;
+def fmt.truncate#3():
+    if call fmt.truncate#4(); else call fmt.truncate#2(); endif;
+def fmt.truncate#4():
+    if call fmt.truncate#5(); else call fmt.truncate#3(); endif;
+def fmt.truncate#5():
+    tau;
+def fmt.fmt_s():
+    call fmt.truncate();
+    call fmt.padString();
+def unicode_utf8.RuneCount():
+    call unicode_utf8.RuneCount#3();
+def unicode_utf8.RuneCount#1():
+    if call unicode_utf8.RuneCount#4(); else call unicode_utf8.RuneCount#5(); endif;
+def unicode_utf8.RuneCount#2():
+    tau;
+def unicode_utf8.RuneCount#3():
+    ifFor (int t6 = 0; (t6<t0); t6 = t6 + 1) then call unicode_utf8.RuneCount#1(); else call unicode_utf8.RuneCount#2(); endif;
+def unicode_utf8.RuneCount#4():
+    call unicode_utf8.RuneCount#3();
+def unicode_utf8.RuneCount#5():
+    if call unicode_utf8.RuneCount#6(); else call unicode_utf8.RuneCount#7(); endif;
+def unicode_utf8.RuneCount#6():
+    call unicode_utf8.RuneCount#3();
+def unicode_utf8.RuneCount#7():
+    if call unicode_utf8.RuneCount#8(); else call unicode_utf8.RuneCount#9(); endif;
+def unicode_utf8.RuneCount#8():
+    call unicode_utf8.RuneCount#3();
+def unicode_utf8.RuneCount#9():
+    if call unicode_utf8.RuneCount#10(); else call unicode_utf8.RuneCount#13(); endif;
+def unicode_utf8.RuneCount#10():
+    call unicode_utf8.RuneCount#11();
+def unicode_utf8.RuneCount#11():
+    call unicode_utf8.RuneCount#3();
+def unicode_utf8.RuneCount#12():
+    if call unicode_utf8.RuneCount#11(); else call unicode_utf8.RuneCount#14(); endif;
+def unicode_utf8.RuneCount#13():
+    tau;
+def unicode_utf8.RuneCount#14():
+    if call unicode_utf8.RuneCount#15(); else call unicode_utf8.RuneCount#17(); endif;
+def unicode_utf8.RuneCount#15():
+    call unicode_utf8.RuneCount#11();
+def unicode_utf8.RuneCount#16():
+    if call unicode_utf8.RuneCount#11(); else call unicode_utf8.RuneCount#18(); endif;
+def unicode_utf8.RuneCount#17():
+    tau;
+def unicode_utf8.RuneCount#18():
+    if call unicode_utf8.RuneCount#19(); else call unicode_utf8.RuneCount#20(); endif;
+def unicode_utf8.RuneCount#19():
+    call unicode_utf8.RuneCount#11();
+def unicode_utf8.RuneCount#20():
+    tau;
+def fmt.Write():
+    tau;
+def fmt.pad():
+    if call fmt.pad#3(); else call fmt.pad#1(); endif;
+def fmt.pad#1():
+    call fmt.Write();
+def fmt.pad#2():
+    call unicode_utf8.RuneCount();
+    if call fmt.pad#6(); else call fmt.pad#4(); endif;
+def fmt.pad#3():
+    tau;
+def fmt.pad#4():
+    call fmt.writePadding();
+    call fmt.Write();
+    call fmt.pad#5();
+def fmt.pad#5():
+    tau;
+def fmt.pad#6():
+    call fmt.Write();
+    call fmt.writePadding();
+    call fmt.pad#5();
+def fmt.fmt_integer():
+    if call fmt.fmt_integer#1(); else call fmt.fmt_integer#2(); endif;
+def fmt.fmt_integer#1():
+    call fmt.fmt_integer#2();
+def fmt.fmt_integer#2():
+    if call fmt.fmt_integer#3(); else call fmt.fmt_integer#4(); endif;
+def fmt.fmt_integer#3():
+    call fmt.fmt_integer#4();
+def fmt.fmt_integer#4():
+    if call fmt.fmt_integer#5(); else call fmt.fmt_integer#7(); endif;
+def fmt.fmt_integer#5():
+    if call fmt.fmt_integer#8(); else call fmt.fmt_integer#6(); endif;
+def fmt.fmt_integer#6():
+    if call fmt.fmt_integer#9(); else call fmt.fmt_integer#11(); endif;
+def fmt.fmt_integer#7():
+    tau;
+def fmt.fmt_integer#8():
+    call fmt.fmt_integer#6();
+def fmt.fmt_integer#9():
+    if call fmt.fmt_integer#13(); else call fmt.fmt_integer#10(); endif;
+def fmt.fmt_integer#10():
+    if call fmt.fmt_integer#22(); else call fmt.fmt_integer#20(); endif;
+def fmt.fmt_integer#11():
+    if call fmt.fmt_integer#15(); else call fmt.fmt_integer#10(); endif;
+def fmt.fmt_integer#12():
+    call fmt.writePadding();
+def fmt.fmt_integer#13():
+    tau;
+def fmt.fmt_integer#14():
+    if call fmt.fmt_integer#16(); else call fmt.fmt_integer#18(); endif;
+def fmt.fmt_integer#15():
+    tau;
+def fmt.fmt_integer#16():
+    call fmt.fmt_integer#10();
+def fmt.fmt_integer#17():
+    tau;
+def fmt.fmt_integer#18():
+    tau;
+def fmt.fmt_integer#19():
+    call fmt.fmt_integer#34();
+def fmt.fmt_integer#20():
+    if call fmt.fmt_integer#25(); else call fmt.fmt_integer#23(); endif;
+def fmt.fmt_integer#21():
+    call fmt.fmt_integer#22();
+def fmt.fmt_integer#22():
+    if call fmt.fmt_integer#21(); else call fmt.fmt_integer#19(); endif;
+def fmt.fmt_integer#23():
+    if call fmt.fmt_integer#28(); else call fmt.fmt_integer#26(); endif;
+def fmt.fmt_integer#24():
+    call fmt.fmt_integer#25();
+def fmt.fmt_integer#25():
+    if call fmt.fmt_integer#24(); else call fmt.fmt_integer#19(); endif;
+def fmt.fmt_integer#26():
+    if call fmt.fmt_integer#31(); else call fmt.fmt_integer#29(); endif;
+def fmt.fmt_integer#27():
+    call fmt.fmt_integer#28();
+def fmt.fmt_integer#28():
+    if call fmt.fmt_integer#27(); else call fmt.fmt_integer#19(); endif;
+def fmt.fmt_integer#29():
+    tau;
+def fmt.fmt_integer#30():
+    call fmt.fmt_integer#31();
+def fmt.fmt_integer#31():
+    if call fmt.fmt_integer#30(); else call fmt.fmt_integer#19(); endif;
+def fmt.fmt_integer#32():
+    call fmt.fmt_integer#34();
+def fmt.fmt_integer#33():
+    if call fmt.fmt_integer#36(); else call fmt.fmt_integer#37(); endif;
+def fmt.fmt_integer#34():
+    if call fmt.fmt_integer#35(); else call fmt.fmt_integer#33(); endif;
+def fmt.fmt_integer#35():
+    tau;
+def fmt.fmt_integer#36():
+    if call fmt.fmt_integer#38(); else call fmt.fmt_integer#40(); endif;
+def fmt.fmt_integer#37():
+    if call fmt.fmt_integer#42(); else call fmt.fmt_integer#44(); endif;
+def fmt.fmt_integer#38():
+    if call fmt.fmt_integer#41(); else call fmt.fmt_integer#37(); endif;
+def fmt.fmt_integer#39():
+    call fmt.fmt_integer#37();
+def fmt.fmt_integer#40():
+    if call fmt.fmt_integer#39(); else call fmt.fmt_integer#37(); endif;
+def fmt.fmt_integer#41():
+    call fmt.fmt_integer#37();
+def fmt.fmt_integer#42():
+    call fmt.fmt_integer#43();
+def fmt.fmt_integer#43():
+    call fmt.pad();
+def fmt.fmt_integer#44():
+    if call fmt.fmt_integer#45(); else call fmt.fmt_integer#46(); endif;
+def fmt.fmt_integer#45():
+    call fmt.fmt_integer#43();
+def fmt.fmt_integer#46():
+    if call fmt.fmt_integer#47(); else call fmt.fmt_integer#43(); endif;
+def fmt.fmt_integer#47():
+    call fmt.fmt_integer#43();
+def fmt.fmt0x64():
+    call fmt.fmt_integer();
+def fmt.fmt_c():
+    if call fmt.fmt_c#1(); else call fmt.fmt_c#2(); endif;
+def fmt.fmt_c#1():
+    call fmt.fmt_c#2();
+def fmt.fmt_c#2():
+    call unicode_utf8.EncodeRune();
+    call fmt.pad();
+def unicode_utf8.ValidRune():
+    if call unicode_utf8.ValidRune#4(); else call unicode_utf8.ValidRune#5(); endif;
+def unicode_utf8.ValidRune#1():
+    tau;
+def unicode_utf8.ValidRune#2():
+    tau;
+def unicode_utf8.ValidRune#3():
+    if call unicode_utf8.ValidRune#7(); else call unicode_utf8.ValidRune#8(); endif;
+def unicode_utf8.ValidRune#4():
+    call unicode_utf8.ValidRune#5();
+def unicode_utf8.ValidRune#5():
+    if call unicode_utf8.ValidRune#1(); else call unicode_utf8.ValidRune#3(); endif;
+def unicode_utf8.ValidRune#6():
+    tau;
+def unicode_utf8.ValidRune#7():
+    call unicode_utf8.ValidRune#8();
+def unicode_utf8.ValidRune#8():
+    if call unicode_utf8.ValidRune#2(); else call unicode_utf8.ValidRune#6(); endif;
+def unicode_utf8.RuneLen():
+    if call unicode_utf8.RuneLen#1(); else call unicode_utf8.RuneLen#3(); endif;
+def unicode_utf8.RuneLen#1():
+    tau;
+def unicode_utf8.RuneLen#2():
+    tau;
+def unicode_utf8.RuneLen#3():
+    if call unicode_utf8.RuneLen#2(); else call unicode_utf8.RuneLen#5(); endif;
+def unicode_utf8.RuneLen#4():
+    tau;
+def unicode_utf8.RuneLen#5():
+    if call unicode_utf8.RuneLen#4(); else call unicode_utf8.RuneLen#7(); endif;
+def unicode_utf8.RuneLen#6():
+    tau;
+def unicode_utf8.RuneLen#7():
+    if call unicode_utf8.RuneLen#10(); else call unicode_utf8.RuneLen#11(); endif;
+def unicode_utf8.RuneLen#8():
+    tau;
+def unicode_utf8.RuneLen#9():
+    if call unicode_utf8.RuneLen#8(); else call unicode_utf8.RuneLen#13(); endif;
+def unicode_utf8.RuneLen#10():
+    call unicode_utf8.RuneLen#11();
+def unicode_utf8.RuneLen#11():
+    if call unicode_utf8.RuneLen#6(); else call unicode_utf8.RuneLen#9(); endif;
+def unicode_utf8.RuneLen#12():
+    tau;
+def unicode_utf8.RuneLen#13():
+    if call unicode_utf8.RuneLen#12(); else call unicode_utf8.RuneLen#14(); endif;
+def unicode_utf8.RuneLen#14():
+    tau;
+def strconv.bsearch16():
+    call strconv.bsearch16#3();
+def strconv.bsearch16#1():
+    if call strconv.bsearch16#4(); else call strconv.bsearch16#5(); endif;
+def strconv.bsearch16#2():
+    tau;
+def strconv.bsearch16#3():
+    ifFor (int t7 = 0; (t7<t8); t7 = t7 + 1) then call strconv.bsearch16#1(); else call strconv.bsearch16#2(); endif;
+def strconv.bsearch16#4():
+    call strconv.bsearch16#3();
+def strconv.bsearch16#5():
+    call strconv.bsearch16#3();
+def strconv.bsearch32():
+    call strconv.bsearch32#3();
+def strconv.bsearch32#1():
+    if call strconv.bsearch32#4(); else call strconv.bsearch32#5(); endif;
+def strconv.bsearch32#2():
+    tau;
+def strconv.bsearch32#3():
+    ifFor (int t7 = 0; (t7<t8); t7 = t7 + 1) then call strconv.bsearch32#1(); else call strconv.bsearch32#2(); endif;
+def strconv.bsearch32#4():
+    call strconv.bsearch32#3();
+def strconv.bsearch32#5():
+    call strconv.bsearch32#3();
+def strconv.IsPrint():
+    if call strconv.IsPrint#1(); else call strconv.IsPrint#2(); endif;
+def strconv.IsPrint#1():
+    if call strconv.IsPrint#5(); else call strconv.IsPrint#4(); endif;
+def strconv.IsPrint#2():
+    if call strconv.IsPrint#11(); else call strconv.IsPrint#10(); endif;
+def strconv.IsPrint#3():
+    tau;
+def strconv.IsPrint#4():
+    if call strconv.IsPrint#8(); else call strconv.IsPrint#7(); endif;
+def strconv.IsPrint#5():
+    tau;
+def strconv.IsPrint#6():
+    tau;
+def strconv.IsPrint#7():
+    tau;
+def strconv.IsPrint#8():
+    tau;
+def strconv.IsPrint#9():
+    call strconv.bsearch16();
+    if call strconv.IsPrint#12(); else call strconv.IsPrint#15(); endif;
+def strconv.IsPrint#10():
+    call strconv.bsearch32();
+    if call strconv.IsPrint#18(); else call strconv.IsPrint#21(); endif;
+def strconv.IsPrint#11():
+    tau;
+def strconv.IsPrint#12():
+    tau;
+def strconv.IsPrint#13():
+    call strconv.bsearch16();
+    if call strconv.IsPrint#17(); else call strconv.IsPrint#16(); endif;
+def strconv.IsPrint#14():
+    tau;
+def strconv.IsPrint#15():
+    tau;
+def strconv.IsPrint#16():
+    call strconv.IsPrint#17();
+def strconv.IsPrint#17():
+    tau;
+def strconv.IsPrint#18():
+    tau;
+def strconv.IsPrint#19():
+    if call strconv.IsPrint#22(); else call strconv.IsPrint#23(); endif;
+def strconv.IsPrint#20():
+    tau;
+def strconv.IsPrint#21():
+    tau;
+def strconv.IsPrint#22():
+    tau;
+def strconv.IsPrint#23():
+    call strconv.bsearch16();
+    if call strconv.IsPrint#25(); else call strconv.IsPrint#24(); endif;
+def strconv.IsPrint#24():
+    call strconv.IsPrint#25();
+def strconv.IsPrint#25():
+    tau;
+def strconv.isInGraphicList():
+    if call strconv.isInGraphicList#1(); else call strconv.isInGraphicList#2(); endif;
+def strconv.isInGraphicList#1():
+    tau;
+def strconv.isInGraphicList#2():
+    call strconv.bsearch16();
+    if call strconv.isInGraphicList#3(); else call strconv.isInGraphicList#4(); endif;
+def strconv.isInGraphicList#3():
+    call strconv.isInGraphicList#4();
+def strconv.isInGraphicList#4():
+    tau;
+def strconv.appendEscapedRune():
+    if call strconv.appendEscapedRune#1(); else call strconv.appendEscapedRune#3(); endif;
+def strconv.appendEscapedRune#1():
+    tau;
+def strconv.appendEscapedRune#2():
+    if call strconv.appendEscapedRune#4(); else call strconv.appendEscapedRune#6(); endif;
+def strconv.appendEscapedRune#3():
+    tau;
+def strconv.appendEscapedRune#4():
+    if call strconv.appendEscapedRune#8(); else call strconv.appendEscapedRune#5(); endif;
+def strconv.appendEscapedRune#5():
+    if call strconv.appendEscapedRune#13(); else call strconv.appendEscapedRune#15(); endif;
+def strconv.appendEscapedRune#6():
+    call strconv.IsPrint();
+    if call strconv.appendEscapedRune#9(); else call strconv.appendEscapedRune#10(); endif;
+def strconv.appendEscapedRune#7():
+    tau;
+def strconv.appendEscapedRune#8():
+    call strconv.IsPrint();
+def strconv.appendEscapedRune#9():
+    call unicode_utf8.EncodeRune();
+def strconv.appendEscapedRune#10():
+    tau;
+def strconv.appendEscapedRune#11():
+    call strconv.isInGraphicList();
+def strconv.appendEscapedRune#12():
+    tau;
+def strconv.appendEscapedRune#13():
+    call strconv.appendEscapedRune#12();
+def strconv.appendEscapedRune#14():
+    call strconv.appendEscapedRune#12();
+def strconv.appendEscapedRune#15():
+    if call strconv.appendEscapedRune#14(); else call strconv.appendEscapedRune#17(); endif;
+def strconv.appendEscapedRune#16():
+    call strconv.appendEscapedRune#12();
+def strconv.appendEscapedRune#17():
+    if call strconv.appendEscapedRune#16(); else call strconv.appendEscapedRune#19(); endif;
+def strconv.appendEscapedRune#18():
+    call strconv.appendEscapedRune#12();
+def strconv.appendEscapedRune#19():
+    if call strconv.appendEscapedRune#18(); else call strconv.appendEscapedRune#21(); endif;
+def strconv.appendEscapedRune#20():
+    call strconv.appendEscapedRune#12();
+def strconv.appendEscapedRune#21():
+    if call strconv.appendEscapedRune#20(); else call strconv.appendEscapedRune#23(); endif;
+def strconv.appendEscapedRune#22():
+    call strconv.appendEscapedRune#12();
+def strconv.appendEscapedRune#23():
+    if call strconv.appendEscapedRune#22(); else call strconv.appendEscapedRune#25(); endif;
+def strconv.appendEscapedRune#24():
+    call strconv.appendEscapedRune#12();
+def strconv.appendEscapedRune#25():
+    if call strconv.appendEscapedRune#24(); else call strconv.appendEscapedRune#26(); endif;
+def strconv.appendEscapedRune#26():
+    if call strconv.appendEscapedRune#27(); else call strconv.appendEscapedRune#29(); endif;
+def strconv.appendEscapedRune#27():
+    call strconv.appendEscapedRune#12();
+def strconv.appendEscapedRune#28():
+    call strconv.appendEscapedRune#30();
+def strconv.appendEscapedRune#29():
+    if call strconv.appendEscapedRune#28(); else call strconv.appendEscapedRune#31(); endif;
+def strconv.appendEscapedRune#30():
+    call strconv.appendEscapedRune#34();
+def strconv.appendEscapedRune#31():
+    if call strconv.appendEscapedRune#30(); else call strconv.appendEscapedRune#32(); endif;
+def strconv.appendEscapedRune#32():
+    call strconv.appendEscapedRune#36();
+def strconv.appendEscapedRune#33():
+    call strconv.appendEscapedRune#34();
+def strconv.appendEscapedRune#34():
+    ifFor (int t72 = 12; (t72>=0); t72 = t72 - 4) then call strconv.appendEscapedRune#33(); else call strconv.appendEscapedRune#0(); endif;
+
+def strconv.appendEscapedRune#0(): tau ;
+
+def strconv.appendEscapedRune#35():
+    call strconv.appendEscapedRune#36();
+def strconv.appendEscapedRune#36():
+    ifFor (int t84 = 28; (t84>=0); t84 = t84 - 4) then call strconv.appendEscapedRune#35(); else call strconv.appendEscapedRune#0(); endif;
+def strconv.appendQuotedRuneWith():
+    call unicode_utf8.ValidRune();
+    if call strconv.appendQuotedRuneWith#2(); else call strconv.appendQuotedRuneWith#1(); endif;
+def strconv.appendQuotedRuneWith#1():
+    call strconv.appendQuotedRuneWith#2();
+def strconv.appendQuotedRuneWith#2():
+    call unicode_utf8.RuneLen();
+    call strconv.appendEscapedRune();
+def strconv.AppendQuoteRuneToASCII():
+    call strconv.appendQuotedRuneWith();
+def strconv.AppendQuoteRune():
+    call strconv.appendQuotedRuneWith();
+def fmt.fmt_qc():
+    if call fmt.fmt_qc#1(); else call fmt.fmt_qc#2(); endif;
+def fmt.fmt_qc#1():
+    call fmt.fmt_qc#2();
+def fmt.fmt_qc#2():
+    if call fmt.fmt_qc#3(); else call fmt.fmt_qc#5(); endif;
+def fmt.fmt_qc#3():
+    call strconv.AppendQuoteRuneToASCII();
+    call fmt.pad();
+    call fmt.fmt_qc#4();
+def fmt.fmt_qc#4():
+    tau;
+def fmt.fmt_qc#5():
+    call strconv.AppendQuoteRune();
+    call fmt.pad();
+    call fmt.fmt_qc#4();
+def unicode_utf8.DecodeRuneInString():
+    if call unicode_utf8.DecodeRuneInString#1(); else call unicode_utf8.DecodeRuneInString#2(); endif;
+def unicode_utf8.DecodeRuneInString#1():
+    tau;
+def unicode_utf8.DecodeRuneInString#2():
+    if call unicode_utf8.DecodeRuneInString#3(); else call unicode_utf8.DecodeRuneInString#4(); endif;
+def unicode_utf8.DecodeRuneInString#3():
+    tau;
+def unicode_utf8.DecodeRuneInString#4():
+    if call unicode_utf8.DecodeRuneInString#5(); else call unicode_utf8.DecodeRuneInString#6(); endif;
+def unicode_utf8.DecodeRuneInString#5():
+    tau;
+def unicode_utf8.DecodeRuneInString#6():
+    if call unicode_utf8.DecodeRuneInString#7(); else call unicode_utf8.DecodeRuneInString#9(); endif;
+def unicode_utf8.DecodeRuneInString#7():
+    tau;
+def unicode_utf8.DecodeRuneInString#8():
+    if call unicode_utf8.DecodeRuneInString#10(); else call unicode_utf8.DecodeRuneInString#11(); endif;
+def unicode_utf8.DecodeRuneInString#9():
+    tau;
+def unicode_utf8.DecodeRuneInString#10():
+    tau;
+def unicode_utf8.DecodeRuneInString#11():
+    if call unicode_utf8.DecodeRuneInString#12(); else call unicode_utf8.DecodeRuneInString#14(); endif;
+def unicode_utf8.DecodeRuneInString#12():
+    tau;
+def unicode_utf8.DecodeRuneInString#13():
+    if call unicode_utf8.DecodeRuneInString#15(); else call unicode_utf8.DecodeRuneInString#16(); endif;
+def unicode_utf8.DecodeRuneInString#14():
+    tau;
+def unicode_utf8.DecodeRuneInString#15():
+    tau;
+def unicode_utf8.DecodeRuneInString#16():
+    if call unicode_utf8.DecodeRuneInString#17(); else call unicode_utf8.DecodeRuneInString#19(); endif;
+def unicode_utf8.DecodeRuneInString#17():
+    tau;
+def unicode_utf8.DecodeRuneInString#18():
+    tau;
+def unicode_utf8.DecodeRuneInString#19():
+    tau;
+def strconv.CanBackquote():
+    call strconv.CanBackquote#3();
+def strconv.CanBackquote#1():
+    call unicode_utf8.DecodeRuneInString();
+    if call strconv.CanBackquote#4(); else call strconv.CanBackquote#5(); endif;
+def strconv.CanBackquote#2():
+    tau;
+def strconv.CanBackquote#3():
+    if call strconv.CanBackquote#1(); else call strconv.CanBackquote#2(); endif;
+def strconv.CanBackquote#4():
+    if call strconv.CanBackquote#6(); else call strconv.CanBackquote#3(); endif;
+def strconv.CanBackquote#5():
+    if call strconv.CanBackquote#7(); else call strconv.CanBackquote#8(); endif;
+def strconv.CanBackquote#6():
+    tau;
+def strconv.CanBackquote#7():
+    tau;
+def strconv.CanBackquote#8():
+    if call strconv.CanBackquote#12(); else call strconv.CanBackquote#11(); endif;
+def strconv.CanBackquote#9():
+    tau;
+def strconv.CanBackquote#10():
+    tau;
+def strconv.CanBackquote#11():
+    tau;
+def strconv.CanBackquote#12():
+    tau;
+def strconv.appendQuotedWith():
+    call strconv.appendQuotedWith#3();
+def strconv.appendQuotedWith#1():
+    if call strconv.appendQuotedWith#5(); else call strconv.appendQuotedWith#6(); endif;
+def strconv.appendQuotedWith#2():
+    tau;
+def strconv.appendQuotedWith#3():
+    if call strconv.appendQuotedWith#1(); else call strconv.appendQuotedWith#2(); endif;
+def strconv.appendQuotedWith#4():
+    call strconv.appendQuotedWith#3();
+def strconv.appendQuotedWith#5():
+    call unicode_utf8.DecodeRuneInString();
+    call strconv.appendQuotedWith#6();
+def strconv.appendQuotedWith#6():
+    if call strconv.appendQuotedWith#9(); else call strconv.appendQuotedWith#8(); endif;
+def strconv.appendQuotedWith#7():
+    call strconv.appendQuotedWith#4();
+def strconv.appendQuotedWith#8():
+    call strconv.appendEscapedRune();
+    call strconv.appendQuotedWith#4();
+def strconv.appendQuotedWith#9():
+    tau;
+def strconv.AppendQuoteToASCII():
+    call strconv.appendQuotedWith();
+def strconv.AppendQuote():
+    call strconv.appendQuotedWith();
+def fmt.fmt_q():
+    call fmt.truncate();
+    if call fmt.fmt_q#3(); else call fmt.fmt_q#2(); endif;
+def fmt.fmt_q#1():
+    call fmt.padString();
+def fmt.fmt_q#2():
+    if call fmt.fmt_q#4(); else call fmt.fmt_q#6(); endif;
+def fmt.fmt_q#3():
+    call strconv.CanBackquote();
+def fmt.fmt_q#4():
+    call strconv.AppendQuoteToASCII();
+    call fmt.pad();
+    call fmt.fmt_q#5();
+def fmt.fmt_q#5():
+    tau;
+def fmt.fmt_q#6():
+    call strconv.AppendQuote();
+    call fmt.pad();
+    call fmt.fmt_q#5();
+def fmt.fmt_sbx():
+    if call fmt.fmt_sbx#1(); else call fmt.fmt_sbx#2(); endif;
+def fmt.fmt_sbx#1():
+    call fmt.fmt_sbx#2();
+def fmt.fmt_sbx#2():
+    if call fmt.fmt_sbx#5(); else call fmt.fmt_sbx#4(); endif;
+def fmt.fmt_sbx#3():
+    call fmt.fmt_sbx#4();
+def fmt.fmt_sbx#4():
+    if call fmt.fmt_sbx#6(); else call fmt.fmt_sbx#7(); endif;
+def fmt.fmt_sbx#5():
+    tau;
+def fmt.fmt_sbx#6():
+    if call fmt.fmt_sbx#8(); else call fmt.fmt_sbx#10(); endif;
+def fmt.fmt_sbx#7():
+    if call fmt.fmt_sbx#14(); else call fmt.fmt_sbx#15(); endif;
+def fmt.fmt_sbx#8():
+    if call fmt.fmt_sbx#11(); else call fmt.fmt_sbx#12(); endif;
+def fmt.fmt_sbx#9():
+    if call fmt.fmt_sbx#19(); else call fmt.fmt_sbx#17(); endif;
+def fmt.fmt_sbx#10():
+    if call fmt.fmt_sbx#13(); else call fmt.fmt_sbx#9(); endif;
+def fmt.fmt_sbx#11():
+    call fmt.fmt_sbx#12();
+def fmt.fmt_sbx#12():
+    call fmt.fmt_sbx#9();
+def fmt.fmt_sbx#13():
+    call fmt.fmt_sbx#9();
+def fmt.fmt_sbx#14():
+    call fmt.writePadding();
+    call fmt.fmt_sbx#15();
+def fmt.fmt_sbx#15():
+    tau;
+def fmt.fmt_sbx#16():
+    call fmt.writePadding();
+    call fmt.fmt_sbx#17();
+def fmt.fmt_sbx#17():
+    if call fmt.fmt_sbx#20(); else call fmt.fmt_sbx#21(); endif;
+def fmt.fmt_sbx#18():
+    tau;
+def fmt.fmt_sbx#19():
+    tau;
+def fmt.fmt_sbx#20():
+    call fmt.fmt_sbx#21();
+def fmt.fmt_sbx#21():
+    call fmt.fmt_sbx#24();
+def fmt.fmt_sbx#22():
+    if call fmt.fmt_sbx#27(); else call fmt.fmt_sbx#26(); endif;
+def fmt.fmt_sbx#23():
+    if call fmt.fmt_sbx#35(); else call fmt.fmt_sbx#33(); endif;
+def fmt.fmt_sbx#24():
+    ifFor (int t71 = 0; (t71<t9); t71 = t71 + 1) then call fmt.fmt_sbx#22(); else call fmt.fmt_sbx#23(); endif;
+def fmt.fmt_sbx#25():
+    if call fmt.fmt_sbx#28(); else call fmt.fmt_sbx#26(); endif;
+def fmt.fmt_sbx#26():
+    if call fmt.fmt_sbx#29(); else call fmt.fmt_sbx#31(); endif;
+def fmt.fmt_sbx#27():
+    tau;
+def fmt.fmt_sbx#28():
+    call fmt.fmt_sbx#26();
+def fmt.fmt_sbx#29():
+    call fmt.fmt_sbx#30();
+def fmt.fmt_sbx#30():
+    call fmt.fmt_sbx#24();
+def fmt.fmt_sbx#31():
+    call fmt.fmt_sbx#30();
+def fmt.fmt_sbx#32():
+    call fmt.writePadding();
+    call fmt.fmt_sbx#33();
+def fmt.fmt_sbx#33():
+    tau;
+def fmt.fmt_sbx#34():
+    tau;
+def fmt.fmt_sbx#35():
+    tau;
+def fmt.fmt_sx():
+    call fmt.fmt_sbx();
+def fmt.badVerb():
+    if call fmt.badVerb#2(); else call fmt.badVerb#4(); endif;
+def fmt.badVerb#1():
+    call fmt.WriteByte();
+def fmt.badVerb#2():
+    call fmt.badVerb#1();
+def fmt.badVerb#3():
+    call fmt.badVerb#1();
+def fmt.badVerb#4():
+    if call fmt.badVerb#3(); else call fmt.badVerb#5(); endif;
+def fmt.badVerb#5():
+    call fmt.WriteString();
+    call fmt.badVerb#1();
+def fmt.fmtString():
+    if call fmt.fmtString#2(); else call fmt.fmtString#4(); endif;
+def fmt.fmtString#1():
+    tau;
+def fmt.fmtString#2():
+    if call fmt.fmtString#5(); else call fmt.fmtString#6(); endif;
+def fmt.fmtString#3():
+    call fmt.fmt_s();
+    call fmt.fmtString#1();
+def fmt.fmtString#4():
+    if call fmt.fmtString#3(); else call fmt.fmtString#8(); endif;
+def fmt.fmtString#5():
+    call fmt.fmt_q();
+    call fmt.fmtString#1();
+def fmt.fmtString#6():
+    call fmt.fmt_s();
+    call fmt.fmtString#1();
+def fmt.fmtString#7():
+    call fmt.fmt_sx();
+    call fmt.fmtString#1();
+def fmt.fmtString#8():
+    if call fmt.fmtString#7(); else call fmt.fmtString#10(); endif;
+def fmt.fmtString#9():
+    call fmt.fmt_sx();
+    call fmt.fmtString#1();
+def fmt.fmtString#10():
+    if call fmt.fmtString#9(); else call fmt.fmtString#12(); endif;
+def fmt.fmtString#11():
+    call fmt.fmt_q();
+    call fmt.fmtString#1();
+def fmt.fmtString#12():
+    if call fmt.fmtString#11(); else call fmt.fmtString#13(); endif;
+def fmt.fmtString#13():
+    call fmt.badVerb();
+    call fmt.fmtString#1();
+def fmt.handleMethods():
+    if call fmt.handleMethods#1(); else call fmt.handleMethods#2(); endif;
+def fmt.handleMethods#1():
+    tau;
+def fmt.handleMethods#2():
+    if call fmt.handleMethods#3(); else call fmt.handleMethods#4(); endif;
+def fmt.handleMethods#3():
+    tau;
+def fmt.handleMethods#4():
+    if call fmt.handleMethods#6(); else call fmt.handleMethods#8(); endif;
+def fmt.handleMethods#5():
+    tau;
+def fmt.handleMethods#6():
+    if call fmt.handleMethods#9(); else call fmt.handleMethods#7(); endif;
+def fmt.handleMethods#7():
+    tau;
+def fmt.handleMethods#8():
+    if call fmt.handleMethods#10(); else call fmt.handleMethods#11(); endif;
+def fmt.handleMethods#9():
+    call fmt.fmt_s();
+def fmt.handleMethods#10():
+    if call fmt.handleMethods#15(); else call fmt.handleMethods#16(); endif;
+def fmt.handleMethods#11():
+    if call fmt.handleMethods#10(); else call fmt.handleMethods#12(); endif;
+def fmt.handleMethods#12():
+    if call fmt.handleMethods#10(); else call fmt.handleMethods#13(); endif;
+def fmt.handleMethods#13():
+    if call fmt.handleMethods#10(); else call fmt.handleMethods#14(); endif;
+def fmt.handleMethods#14():
+    if call fmt.handleMethods#10(); else call fmt.handleMethods#7(); endif;
+def fmt.handleMethods#15():
+    call fmt.fmtString();
+def fmt.handleMethods#16():
+    if call fmt.handleMethods#17(); else call fmt.handleMethods#7(); endif;
+def fmt.handleMethods#17():
+    call fmt.fmtString();
+def fmt.fmt_boolean():
+    if call fmt.fmt_boolean#1(); else call fmt.fmt_boolean#3(); endif;
+def fmt.fmt_boolean#1():
+    call fmt.padString();
+    call fmt.fmt_boolean#2();
+def fmt.fmt_boolean#2():
+    tau;
+def fmt.fmt_boolean#3():
+    call fmt.padString();
+    call fmt.fmt_boolean#2();
+def fmt.fmtBool():
+    if call fmt.fmtBool#2(); else call fmt.fmtBool#3(); endif;
+def fmt.fmtBool#1():
+    tau;
+def fmt.fmtBool#2():
+    call fmt.fmt_boolean();
+    call fmt.fmtBool#1();
+def fmt.fmtBool#3():
+    if call fmt.fmtBool#2(); else call fmt.fmtBool#4(); endif;
+def fmt.fmtBool#4():
+    call fmt.badVerb();
+    call fmt.fmtBool#1();
+def fmt.fmt_unicode():
+    if call fmt.fmt_unicode#3(); else call fmt.fmt_unicode#2(); endif;
+def fmt.fmt_unicode#1():
+    if call fmt.fmt_unicode#4(); else call fmt.fmt_unicode#2(); endif;
+def fmt.fmt_unicode#2():
+    if call fmt.fmt_unicode#7(); else call fmt.fmt_unicode#10(); endif;
+def fmt.fmt_unicode#3():
+    tau;
+def fmt.fmt_unicode#4():
+    call fmt.fmt_unicode#2();
+def fmt.fmt_unicode#5():
+    call unicode_utf8.RuneLen();
+    call unicode_utf8.EncodeRune();
+    call fmt.fmt_unicode#10();
+def fmt.fmt_unicode#6():
+    call strconv.IsPrint();
+def fmt.fmt_unicode#7():
+    tau;
+def fmt.fmt_unicode#8():
+    call fmt.fmt_unicode#10();
+def fmt.fmt_unicode#9():
+    call fmt.fmt_unicode#13();
+def fmt.fmt_unicode#10():
+    if call fmt.fmt_unicode#8(); else call fmt.fmt_unicode#9(); endif;
+def fmt.fmt_unicode#11():
+    call fmt.fmt_unicode#13();
+def fmt.fmt_unicode#12():
+    call fmt.pad();
+def fmt.fmt_unicode#13():
+    if call fmt.fmt_unicode#11(); else call fmt.fmt_unicode#12(); endif;
+def fmt.fmtInteger():
+    if call fmt.fmtInteger#2(); else call fmt.fmtInteger#4(); endif;
+def fmt.fmtInteger#1():
+    tau;
+def fmt.fmtInteger#2():
+    if call fmt.fmtInteger#7(); else call fmt.fmtInteger#6(); endif;
+def fmt.fmtInteger#3():
+    call fmt.fmtInteger#1();
+def fmt.fmtInteger#4():
+    if call fmt.fmtInteger#3(); else call fmt.fmtInteger#9(); endif;
+def fmt.fmtInteger#5():
+    call fmt.fmtInteger#1();
+def fmt.fmtInteger#6():
+    call fmt.fmtInteger#1();
+def fmt.fmtInteger#7():
+    tau;
+def fmt.fmtInteger#8():
+    call fmt.fmtInteger#1();
+def fmt.fmtInteger#9():
+    if call fmt.fmtInteger#8(); else call fmt.fmtInteger#11(); endif;
+def fmt.fmtInteger#10():
+    call fmt.fmtInteger#1();
+def fmt.fmtInteger#11():
+    if call fmt.fmtInteger#10(); else call fmt.fmtInteger#13(); endif;
+def fmt.fmtInteger#12():
+    call fmt.fmtInteger#1();
+def fmt.fmtInteger#13():
+    if call fmt.fmtInteger#12(); else call fmt.fmtInteger#15(); endif;
+def fmt.fmtInteger#14():
+    call fmt.fmtInteger#1();
+def fmt.fmtInteger#15():
+    if call fmt.fmtInteger#14(); else call fmt.fmtInteger#17(); endif;
+def fmt.fmtInteger#16():
+    call fmt.fmtInteger#1();
+def fmt.fmtInteger#17():
+    if call fmt.fmtInteger#16(); else call fmt.fmtInteger#19(); endif;
+def fmt.fmtInteger#18():
+    if call fmt.fmtInteger#22(); else call fmt.fmtInteger#23(); endif;
+def fmt.fmtInteger#19():
+    if call fmt.fmtInteger#18(); else call fmt.fmtInteger#21(); endif;
+def fmt.fmtInteger#20():
+    call fmt.fmt_unicode();
+    call fmt.fmtInteger#1();
+def fmt.fmtInteger#21():
+    if call fmt.fmtInteger#20(); else call fmt.fmtInteger#24(); endif;
+def fmt.fmtInteger#22():
+    call fmt.fmtInteger#1();
+def fmt.fmtInteger#23():
+    call fmt.fmtInteger#1();
+def fmt.fmtInteger#24():
+    call fmt.badVerb();
+    call fmt.fmtInteger#1();
+def math.Float32bits():
+    tau;
+def strconv.formatBits():
+    if call strconv.formatBits#1(); else call strconv.formatBits#3(); endif;
+def strconv.formatBits#1():
+    tau;
+def strconv.formatBits#2():
+    if call strconv.formatBits#4(); else call strconv.formatBits#5(); endif;
+def strconv.formatBits#3():
+    tau;
+def strconv.formatBits#4():
+    call strconv.formatBits#5();
+def strconv.formatBits#5():
+    if call strconv.formatBits#6(); else call strconv.formatBits#8(); endif;
+def strconv.formatBits#6():
+    if call strconv.formatBits#11(); else call strconv.formatBits#9(); endif;
+def strconv.formatBits#7():
+    if call strconv.formatBits#26(); else call strconv.formatBits#27(); endif;
+def strconv.formatBits#8():
+    if call strconv.formatBits#18(); else call strconv.formatBits#19(); endif;
+def strconv.formatBits#9():
+    call strconv.formatBits#17();
+def strconv.formatBits#10():
+    call strconv.formatBits#14();
+def strconv.formatBits#11():
+    if call strconv.formatBits#10(); else call strconv.formatBits#9(); endif;
+def strconv.formatBits#12():
+    call strconv.formatBits#14();
+def strconv.formatBits#13():
+    call strconv.formatBits#11();
+def strconv.formatBits#14():
+    ifFor (int t31 = 9; (t31>0); t31 = t31 - 1) then call strconv.formatBits#12(); else call strconv.formatBits#13(); endif;
+def strconv.formatBits#15():
+    call strconv.formatBits#17();
+def strconv.formatBits#16():
+    call strconv.formatBits#7();
+def strconv.formatBits#17():
+    if call strconv.formatBits#15(); else call strconv.formatBits#16(); endif;
+def strconv.formatBits#18():
+    call strconv.formatBits#22();
+def strconv.formatBits#19():
+    call strconv.formatBits#25();
+def strconv.formatBits#20():
+    call strconv.formatBits#22();
+def strconv.formatBits#21():
+    call strconv.formatBits#7();
+def strconv.formatBits#22():
+    if call strconv.formatBits#20(); else call strconv.formatBits#21(); endif;
+def strconv.formatBits#23():
+    call strconv.formatBits#25();
+def strconv.formatBits#24():
+    call strconv.formatBits#7();
+def strconv.formatBits#25():
+    if call strconv.formatBits#23(); else call strconv.formatBits#24(); endif;
+def strconv.formatBits#26():
+    call strconv.formatBits#27();
+def strconv.formatBits#27():
+    if call strconv.formatBits#28(); else call strconv.formatBits#29(); endif;
+def strconv.formatBits#28():
+    tau;
+def strconv.formatBits#29():
+    tau;
+def strconv.fmtB():
+    if call strconv.fmtB#1(); else call strconv.fmtB#2(); endif;
+def strconv.fmtB#1():
+    call strconv.fmtB#2();
+def strconv.fmtB#2():
+    call strconv.formatBits();
+    if call strconv.fmtB#3(); else call strconv.fmtB#4(); endif;
+def strconv.fmtB#3():
+    call strconv.fmtB#4();
+def strconv.fmtB#4():
+    call strconv.formatBits();
+def strconv.AssignComputeBounds():
+    if call strconv.AssignComputeBounds#3(); else call strconv.AssignComputeBounds#2(); endif;
+def strconv.AssignComputeBounds#1():
+    tau;
+def strconv.AssignComputeBounds#2():
+    if call strconv.AssignComputeBounds#4(); else call strconv.AssignComputeBounds#7(); endif;
+def strconv.AssignComputeBounds#3():
+    tau;
+def strconv.AssignComputeBounds#4():
+    call strconv.AssignComputeBounds#5();
+def strconv.AssignComputeBounds#5():
+    tau;
+def strconv.AssignComputeBounds#6():
+    call strconv.AssignComputeBounds#5();
+def strconv.AssignComputeBounds#7():
+    tau;
+def strconv.adjustLastDigit():
+    if call strconv.adjustLastDigit#1(); else call strconv.adjustLastDigit#4(); endif;
+def strconv.adjustLastDigit#1():
+    tau;
+def strconv.adjustLastDigit#2():
+    call strconv.adjustLastDigit#4();
+def strconv.adjustLastDigit#3():
+    if call strconv.adjustLastDigit#5(); else call strconv.adjustLastDigit#6(); endif;
+def strconv.adjustLastDigit#4():
+    if call strconv.adjustLastDigit#2(); else call strconv.adjustLastDigit#3(); endif;
+def strconv.adjustLastDigit#5():
+    tau;
+def strconv.adjustLastDigit#6():
+    if call strconv.adjustLastDigit#7(); else call strconv.adjustLastDigit#9(); endif;
+def strconv.adjustLastDigit#7():
+    tau;
+def strconv.adjustLastDigit#8():
+    if call strconv.adjustLastDigit#12(); else call strconv.adjustLastDigit#11(); endif;
+def strconv.adjustLastDigit#9():
+    tau;
+def strconv.adjustLastDigit#10():
+    call strconv.adjustLastDigit#11();
+def strconv.adjustLastDigit#11():
+    tau;
+def strconv.adjustLastDigit#12():
+    tau;
+def strconv.Multiply():
+    tau;
+def strconv.frexp10():
+    call strconv.frexp10#1();
+def strconv.frexp10#1():
+    if call strconv.frexp10#2(); else call strconv.frexp10#4(); endif;
+def strconv.frexp10#2():
+    call strconv.frexp10#1();
+def strconv.frexp10#3():
+    call strconv.frexp10#1();
+def strconv.frexp10#4():
+    if call strconv.frexp10#3(); else call strconv.frexp10#5(); endif;
+def strconv.frexp10#5():
+    call strconv.Multiply();
+def strconv.frexp10Many():
+    call strconv.frexp10();
+    call strconv.Multiply();
+    call strconv.Multiply();
+def strconv.Normalize():
+    if call strconv.Normalize#1(); else call strconv.Normalize#2(); endif;
+def strconv.Normalize#1():
+    tau;
+def strconv.Normalize#2():
+    if call strconv.Normalize#3(); else call strconv.Normalize#4(); endif;
+def strconv.Normalize#3():
+    call strconv.Normalize#4();
+def strconv.Normalize#4():
+    if call strconv.Normalize#5(); else call strconv.Normalize#6(); endif;
+def strconv.Normalize#5():
+    call strconv.Normalize#6();
+def strconv.Normalize#6():
+    if call strconv.Normalize#7(); else call strconv.Normalize#8(); endif;
+def strconv.Normalize#7():
+    call strconv.Normalize#8();
+def strconv.Normalize#8():
+    if call strconv.Normalize#9(); else call strconv.Normalize#10(); endif;
+def strconv.Normalize#9():
+    call strconv.Normalize#10();
+def strconv.Normalize#10():
+    if call strconv.Normalize#11(); else call strconv.Normalize#12(); endif;
+def strconv.Normalize#11():
+    call strconv.Normalize#12();
+def strconv.Normalize#12():
+    if call strconv.Normalize#13(); else call strconv.Normalize#14(); endif;
+def strconv.Normalize#13():
+    call strconv.Normalize#14();
+def strconv.Normalize#14():
+    tau;
+def strconv.ShortestDecimal():
+    if call strconv.ShortestDecimal#1(); else call strconv.ShortestDecimal#2(); endif;
+def strconv.ShortestDecimal#1():
+    tau;
+def strconv.ShortestDecimal#2():
+    if call strconv.ShortestDecimal#6(); else call strconv.ShortestDecimal#4(); endif;
+def strconv.ShortestDecimal#3():
+    call strconv.ShortestDecimal#9();
+def strconv.ShortestDecimal#4():
+    call strconv.Normalize();
+    if call strconv.ShortestDecimal#19(); else call strconv.ShortestDecimal#20(); endif;
+def strconv.ShortestDecimal#5():
+    tau;
+def strconv.ShortestDecimal#6():
+    tau;
+def strconv.ShortestDecimal#7():
+    call strconv.ShortestDecimal#9();
+def strconv.ShortestDecimal#8():
+    call strconv.ShortestDecimal#12();
+def strconv.ShortestDecimal#9():
+    if call strconv.ShortestDecimal#7(); else call strconv.ShortestDecimal#8(); endif;
+def strconv.ShortestDecimal#10():
+    call strconv.ShortestDecimal#12();
+def strconv.ShortestDecimal#11():
+    call strconv.ShortestDecimal#15();
+def strconv.ShortestDecimal#12():
+    ifFor (int t48 = 0; (t48<((24-t35)-1)); t48 = t48 + 1) then call strconv.ShortestDecimal#10(); else call strconv.ShortestDecimal#11(); endif;
+def strconv.ShortestDecimal#13():
+    call strconv.ShortestDecimal#15();
+def strconv.ShortestDecimal#14():
+    if call strconv.ShortestDecimal#17(); else call strconv.ShortestDecimal#18(); endif;
+def strconv.ShortestDecimal#15():
+    if call strconv.ShortestDecimal#16(); else call strconv.ShortestDecimal#14(); endif;
+def strconv.ShortestDecimal#16():
+    tau;
+def strconv.ShortestDecimal#17():
+    call strconv.ShortestDecimal#18();
+def strconv.ShortestDecimal#18():
+    tau;
+def strconv.ShortestDecimal#19():
+    call strconv.ShortestDecimal#20();
+def strconv.ShortestDecimal#20():
+    if call strconv.ShortestDecimal#21(); else call strconv.ShortestDecimal#22(); endif;
+def strconv.ShortestDecimal#21():
+    call strconv.ShortestDecimal#22();
+def strconv.ShortestDecimal#22():
+    call strconv.frexp10Many();
+    call strconv.ShortestDecimal#25();
+def strconv.ShortestDecimal#23():
+    if call strconv.ShortestDecimal#26(); else call strconv.ShortestDecimal#27(); endif;
+def strconv.ShortestDecimal#24():
+    call strconv.ShortestDecimal#30();
+def strconv.ShortestDecimal#25():
+    if call strconv.ShortestDecimal#23(); else call strconv.ShortestDecimal#24(); endif;
+def strconv.ShortestDecimal#26():
+    call strconv.ShortestDecimal#24();
+def strconv.ShortestDecimal#27():
+    call strconv.ShortestDecimal#25();
+def strconv.ShortestDecimal#28():
+    if call strconv.ShortestDecimal#31(); else call strconv.ShortestDecimal#32(); endif;
+def strconv.ShortestDecimal#29():
+    call strconv.ShortestDecimal#33();
+def strconv.ShortestDecimal#30():
+    ifFor (int t167 = 0; (t167<t134); t167 = t167 + 1) then call strconv.ShortestDecimal#28(); else call strconv.ShortestDecimal#29(); endif;
+def strconv.ShortestDecimal#31():
+    call strconv.adjustLastDigit();
+def strconv.ShortestDecimal#32():
+    call strconv.ShortestDecimal#30();
+def strconv.ShortestDecimal#33():
+    if call strconv.ShortestDecimal#34(); else call strconv.ShortestDecimal#33(); endif;
+def strconv.ShortestDecimal#34():
+    call strconv.adjustLastDigit();
+def strconv.min():
+    if call strconv.min#1(); else call strconv.min#2(); endif;
+def strconv.min#1():
+    tau;
+def strconv.min#2():
+    tau;
+def strconv.fmtE():
+    if call strconv.fmtE#1(); else call strconv.fmtE#2(); endif;
+def strconv.fmtE#1():
+    call strconv.fmtE#2();
+def strconv.fmtE#2():
+    if call strconv.fmtE#3(); else call strconv.fmtE#4(); endif;
+def strconv.fmtE#3():
+    call strconv.fmtE#4();
+def strconv.fmtE#4():
+    if call strconv.fmtE#5(); else call strconv.fmtE#6(); endif;
+def strconv.fmtE#5():
+    call strconv.min();
+    if call strconv.fmtE#7(); else call strconv.fmtE#9(); endif;
+def strconv.fmtE#6():
+    if call strconv.fmtE#10(); else call strconv.fmtE#11(); endif;
+def strconv.fmtE#7():
+    call strconv.fmtE#9();
+def strconv.fmtE#8():
+    call strconv.fmtE#9();
+def strconv.fmtE#9():
+    ifFor (int t49 = 1; (t49<=prec); t49 = t49 + 1) then call strconv.fmtE#8(); else call strconv.fmtE(); endif;
+def strconv.fmtE#10():
+    call strconv.fmtE#11();
+def strconv.fmtE#11():
+    if call strconv.fmtE#12(); else call strconv.fmtE#14(); endif;
+def strconv.fmtE#12():
+    call strconv.fmtE#13();
+def strconv.fmtE#13():
+    if call strconv.fmtE#16(); else call strconv.fmtE#18(); endif;
+def strconv.fmtE#14():
+    call strconv.fmtE#13();
+def strconv.fmtE#15():
+    tau;
+def strconv.fmtE#16():
+    call strconv.fmtE#15();
+def strconv.fmtE#17():
+    call strconv.fmtE#15();
+def strconv.fmtE#18():
+    if call strconv.fmtE#17(); else call strconv.fmtE#19(); endif;
+def strconv.fmtE#19():
+    call strconv.fmtE#15();
+def strconv.fmtF():
+    if call strconv.fmtF#1(); else call strconv.fmtF#2(); endif;
+def strconv.fmtF#1():
+    call strconv.fmtF#2();
+def strconv.fmtF#2():
+    if call strconv.fmtF#3(); else call strconv.fmtF#5(); endif;
+def strconv.fmtF#3():
+    call strconv.min();
+    call strconv.fmtF#7();
+def strconv.fmtF#4():
+    if call strconv.fmtF#8(); else call strconv.fmtF#9(); endif;
+def strconv.fmtF#5():
+    call strconv.fmtF#4();
+def strconv.fmtF#6():
+    call strconv.fmtF#7();
+def strconv.fmtF#7():
+    if call strconv.fmtF#6(); else call strconv.fmtF#4(); endif;
+def strconv.fmtF#8():
+    call strconv.fmtF#11();
+def strconv.fmtF#9():
+    tau;
+def strconv.fmtF#10():
+    if call strconv.fmtF#14(); else call strconv.fmtF#13(); endif;
+def strconv.fmtF#11():
+    ifFor (int t44 = 0; (t44<prec); t44 = t44 + 1) then call strconv.fmtF#10(); else call strconv.fmtF(); endif;
+def strconv.fmtF#12():
+    call strconv.fmtF#13();
+def strconv.fmtF#13():
+    call strconv.fmtF#11();
+def strconv.fmtF#14():
+    tau;
+def strconv.max():
+    if call strconv.max#1(); else call strconv.max#2(); endif;
+def strconv.max#1():
+    tau;
+def strconv.max#2():
+    tau;
+def strconv.formatDigits():
+    if call strconv.formatDigits#1(); else call strconv.formatDigits#3(); endif;
+def strconv.formatDigits#1():
+    call strconv.fmtE();
+def strconv.formatDigits#2():
+    call strconv.fmtF();
+def strconv.formatDigits#3():
+    if call strconv.formatDigits#1(); else call strconv.formatDigits#4(); endif;
+def strconv.formatDigits#4():
+    if call strconv.formatDigits#2(); else call strconv.formatDigits#6(); endif;
+def strconv.formatDigits#5():
+    if call strconv.formatDigits#11(); else call strconv.formatDigits#10(); endif;
+def strconv.formatDigits#6():
+    if call strconv.formatDigits#5(); else call strconv.formatDigits#7(); endif;
+def strconv.formatDigits#7():
+    if call strconv.formatDigits#5(); else call strconv.formatDigits#8(); endif;
+def strconv.formatDigits#8():
+    tau;
+def strconv.formatDigits#9():
+    call strconv.formatDigits#10();
+def strconv.formatDigits#10():
+    if call strconv.formatDigits#12(); else call strconv.formatDigits#13(); endif;
+def strconv.formatDigits#11():
+    tau;
+def strconv.formatDigits#12():
+    call strconv.formatDigits#13();
+def strconv.formatDigits#13():
+    if call strconv.formatDigits#14(); else call strconv.formatDigits#16(); endif;
+def strconv.formatDigits#14():
+    if call strconv.formatDigits#17(); else call strconv.formatDigits#18(); endif;
+def strconv.formatDigits#15():
+    if call strconv.formatDigits#19(); else call strconv.formatDigits#20(); endif;
+def strconv.formatDigits#16():
+    tau;
+def strconv.formatDigits#17():
+    call strconv.formatDigits#18();
+def strconv.formatDigits#18():
+    call strconv.fmtE();
+def strconv.formatDigits#19():
+    call strconv.formatDigits#20();
+def strconv.formatDigits#20():
+    call strconv.max();
+    call strconv.fmtF();
+def strconv.trim():
+    call strconv.trim#3();
+def strconv.trim#1():
+    call strconv.trim#3();
+def strconv.trim#2():
+    if call strconv.trim#5(); else call strconv.trim#6(); endif;
+def strconv.trim#3():
+    if call strconv.trim#4(); else call strconv.trim#2(); endif;
+def strconv.trim#4():
+    tau;
+def strconv.trim#5():
+    call strconv.trim#6();
+def strconv.trim#6():
+    tau;
+def strconv.Assign():
+    call strconv.Assign#3();
+def strconv.Assign#1():
+    call strconv.Assign#3();
+def strconv.Assign#2():
+    call strconv.Assign#6();
+def strconv.Assign#3():
+    if call strconv.Assign#1(); else call strconv.Assign#2(); endif;
+def strconv.Assign#4():
+    call strconv.Assign#6();
+def strconv.Assign#5():
+    call strconv.trim();
+def strconv.Assign#6():
+    if call strconv.Assign#4(); else call strconv.Assign#5(); endif;
+def strconv.prefixIsLessThan():
+    call strconv.prefixIsLessThan#3();
+def strconv.prefixIsLessThan#1():
+    if call strconv.prefixIsLessThan#4(); else call strconv.prefixIsLessThan#5(); endif;
+def strconv.prefixIsLessThan#2():
+    tau;
+def strconv.prefixIsLessThan#3():
+    ifFor (int t2 = 0; (t2<t3); t2 = t2 + 1) then call strconv.prefixIsLessThan#1(); else call strconv.prefixIsLessThan#2(); endif;
+def strconv.prefixIsLessThan#4():
+    tau;
+def strconv.prefixIsLessThan#5():
+    if call strconv.prefixIsLessThan#6(); else call strconv.prefixIsLessThan#7(); endif;
+def strconv.prefixIsLessThan#6():
+    tau;
+def strconv.prefixIsLessThan#7():
+    call strconv.prefixIsLessThan#3();
+def strconv.leftShift():
+    call strconv.prefixIsLessThan();
+    if call strconv.leftShift#1(); else call strconv.leftShift#2(); endif;
+def strconv.leftShift#1():
+    call strconv.leftShift#2();
+def strconv.leftShift#2():
+    call strconv.leftShift#4();
+def strconv.leftShift#3():
+    if call strconv.leftShift#5(); else call strconv.leftShift#7(); endif;
+def strconv.leftShift#4():
+    if call strconv.leftShift#3(); else call strconv.leftShift#11(); endif;
+def strconv.leftShift#5():
+    call strconv.leftShift#6();
+def strconv.leftShift#6():
+    call strconv.leftShift#4();
+def strconv.leftShift#7():
+    if call strconv.leftShift#8(); else call strconv.leftShift#6(); endif;
+def strconv.leftShift#8():
+    call strconv.leftShift#6();
+def strconv.leftShift#9():
+    if call strconv.leftShift#12(); else call strconv.leftShift#14(); endif;
+def strconv.leftShift#10():
+    if call strconv.leftShift#16(); else call strconv.leftShift#17(); endif;
+def strconv.leftShift#11():
+    if call strconv.leftShift#9(); else call strconv.leftShift#10(); endif;
+def strconv.leftShift#12():
+    call strconv.leftShift#13();
+def strconv.leftShift#13():
+    call strconv.leftShift#11();
+def strconv.leftShift#14():
+    if call strconv.leftShift#15(); else call strconv.leftShift#13(); endif;
+def strconv.leftShift#15():
+    call strconv.leftShift#13();
+def strconv.leftShift#16():
+    call strconv.leftShift#17();
+def strconv.leftShift#17():
+    call strconv.trim();
+def strconv.rightShift():
+    call strconv.rightShift#3();
+def strconv.rightShift#1():
+    if call strconv.rightShift#4(); else call strconv.rightShift#5(); endif;
+def strconv.rightShift#2():
+    call strconv.rightShift#10();
+def strconv.rightShift#3():
+    ifFor (int t12 = 0; (t13==0); t12 = t12 - 48) then call strconv.rightShift#1(); else call strconv.rightShift(); endif;
+def strconv.rightShift#4():
+    if call strconv.rightShift#6(); else call strconv.rightShift#8(); endif;
+def strconv.rightShift#5():
+    call strconv.rightShift#3();
+def strconv.rightShift#6():
+    tau;
+def strconv.rightShift#7():
+    call strconv.rightShift#8();
+def strconv.rightShift#8():
+    if call strconv.rightShift#7(); else call strconv.rightShift#2(); endif;
+def strconv.rightShift#9():
+    call strconv.rightShift#10();
+def strconv.rightShift#10():
+    if call strconv.rightShift#9(); else call strconv.rightShift#13(); endif;
+def strconv.rightShift#11():
+    if call strconv.rightShift#14(); else call strconv.rightShift#16(); endif;
+def strconv.rightShift#12():
+    call strconv.trim();
+def strconv.rightShift#13():
+    if call strconv.rightShift#11(); else call strconv.rightShift#12(); endif;
+def strconv.rightShift#14():
+    call strconv.rightShift#15();
+def strconv.rightShift#15():
+    call strconv.rightShift#13();
+def strconv.rightShift#16():
+    if call strconv.rightShift#17(); else call strconv.rightShift#15(); endif;
+def strconv.rightShift#17():
+    call strconv.rightShift#15();
+def strconv.Shift():
+    if call strconv.Shift#1(); else call strconv.Shift#2(); endif;
+def strconv.Shift#1():
+    tau;
+def strconv.Shift#2():
+    if call strconv.Shift#6(); else call strconv.Shift#3(); endif;
+def strconv.Shift#3():
+    if call strconv.Shift#9(); else call strconv.Shift#1(); endif;
+def strconv.Shift#4():
+    call strconv.leftShift();
+    call strconv.Shift#6();
+def strconv.Shift#5():
+    call strconv.leftShift();
+    call strconv.Shift#1();
+def strconv.Shift#6():
+    if call strconv.Shift#4(); else call strconv.Shift#5(); endif;
+def strconv.Shift#7():
+    call strconv.rightShift();
+    call strconv.Shift#9();
+def strconv.Shift#8():
+    call strconv.rightShift();
+    call strconv.Shift#1();
+def strconv.Shift#9():
+    if call strconv.Shift#7(); else call strconv.Shift#8(); endif;
+def strconv.shouldRoundUp():
+    if call strconv.shouldRoundUp#1(); else call strconv.shouldRoundUp#3(); endif;
+def strconv.shouldRoundUp#1():
+    tau;
+def strconv.shouldRoundUp#2():
+    if call strconv.shouldRoundUp#6(); else call strconv.shouldRoundUp#5(); endif;
+def strconv.shouldRoundUp#3():
+    tau;
+def strconv.shouldRoundUp#4():
+    if call strconv.shouldRoundUp#7(); else call strconv.shouldRoundUp#8(); endif;
+def strconv.shouldRoundUp#5():
+    tau;
+def strconv.shouldRoundUp#6():
+    tau;
+def strconv.shouldRoundUp#7():
+    tau;
+def strconv.shouldRoundUp#8():
+    if call strconv.shouldRoundUp#9(); else call strconv.shouldRoundUp#10(); endif;
+def strconv.shouldRoundUp#9():
+    call strconv.shouldRoundUp#10();
+def strconv.shouldRoundUp#10():
+    tau;
+def strconv.RoundUp():
+    if call strconv.RoundUp#1(); else call strconv.RoundUp#3(); endif;
+def strconv.RoundUp#1():
+    tau;
+def strconv.RoundUp#2():
+    call strconv.RoundUp#6();
+def strconv.RoundUp#3():
+    tau;
+def strconv.RoundUp#4():
+    if call strconv.RoundUp#7(); else call strconv.RoundUp#8(); endif;
+def strconv.RoundUp#5():
+    tau;
+def strconv.RoundUp#6():
+    if call strconv.RoundUp#4(); else call strconv.RoundUp#5(); endif;
+def strconv.RoundUp#7():
+    tau;
+def strconv.RoundUp#8():
+    call strconv.RoundUp#6();
+def strconv.RoundDown():
+    if call strconv.RoundDown#1(); else call strconv.RoundDown#3(); endif;
+def strconv.RoundDown#1():
+    tau;
+def strconv.RoundDown#2():
+    call strconv.trim();
+def strconv.RoundDown#3():
+    tau;
+def strconv.Round():
+    if call strconv.Round#1(); else call strconv.Round#3(); endif;
+def strconv.Round#1():
+    tau;
+def strconv.Round#2():
+    call strconv.shouldRoundUp();
+    if call strconv.Round#4(); else call strconv.Round#6(); endif;
+def strconv.Round#3():
+    tau;
+def strconv.Round#4():
+    call strconv.RoundUp();
+    call strconv.Round#5();
+def strconv.Round#5():
+    tau;
+def strconv.Round#6():
+    call strconv.RoundDown();
+    call strconv.Round#5();
+def strconv.roundShortest():
+    if call strconv.roundShortest#1(); else call strconv.roundShortest#2(); endif;
+def strconv.roundShortest#1():
+    tau;
+def strconv.roundShortest#2():
+    if call strconv.roundShortest#5(); else call strconv.roundShortest#4(); endif;
+def strconv.roundShortest#3():
+    tau;
+def strconv.roundShortest#4():
+    call strconv.Assign();
+    call strconv.Shift();
+    if call strconv.roundShortest#6(); else call strconv.roundShortest#9(); endif;
+def strconv.roundShortest#5():
+    tau;
+def strconv.roundShortest#6():
+    call strconv.roundShortest#7();
+def strconv.roundShortest#7():
+    call strconv.Assign();
+    call strconv.Shift();
+    call strconv.roundShortest#12();
+def strconv.roundShortest#8():
+    call strconv.roundShortest#7();
+def strconv.roundShortest#9():
+    tau;
+def strconv.roundShortest#10():
+    if call strconv.roundShortest#13(); else call strconv.roundShortest#14(); endif;
+def strconv.roundShortest#11():
+    tau;
+def strconv.roundShortest#12():
+    ifFor (int t54 = 0; (t54<t56); t54 = t54 + 1) then call strconv.roundShortest#10(); else call strconv.roundShortest#11(); endif;
+def strconv.roundShortest#13():
+    call strconv.roundShortest#14();
+def strconv.roundShortest#14():
+    if call strconv.roundShortest#15(); else call strconv.roundShortest#16(); endif;
+def strconv.roundShortest#15():
+    call strconv.roundShortest#16();
+def strconv.roundShortest#16():
+    if call strconv.roundShortest#18(); else call strconv.roundShortest#17(); endif;
+def strconv.roundShortest#17():
+    if call strconv.roundShortest#19(); else call strconv.roundShortest#20(); endif;
+def strconv.roundShortest#18():
+    if call strconv.roundShortest#21(); else call strconv.roundShortest#22(); endif;
+def strconv.roundShortest#19():
+    call strconv.roundShortest#20();
+def strconv.roundShortest#20():
+    call strconv.roundShortest#18();
+def strconv.roundShortest#21():
+    if call strconv.roundShortest#24(); else call strconv.roundShortest#25(); endif;
+def strconv.roundShortest#22():
+    if call strconv.roundShortest#29(); else call strconv.roundShortest#30(); endif;
+def strconv.roundShortest#23():
+    call strconv.roundShortest#24();
+def strconv.roundShortest#24():
+    call strconv.roundShortest#22();
+def strconv.roundShortest#25():
+    tau;
+def strconv.roundShortest#26():
+    call strconv.Round();
+def strconv.roundShortest#27():
+    call strconv.RoundDown();
+def strconv.roundShortest#28():
+    if call strconv.roundShortest#27(); else call strconv.roundShortest#32(); endif;
+def strconv.roundShortest#29():
+    call strconv.roundShortest#30();
+def strconv.roundShortest#30():
+    if call strconv.roundShortest#26(); else call strconv.roundShortest#28(); endif;
+def strconv.roundShortest#31():
+    call strconv.RoundUp();
+def strconv.roundShortest#32():
+    if call strconv.roundShortest#31(); else call strconv.roundShortest#33(); endif;
+def strconv.roundShortest#33():
+    call strconv.roundShortest#12();
+def strconv.bigFtoa():
+    call strconv.Assign();
+    call strconv.Shift();
+    if call strconv.bigFtoa#1(); else call strconv.bigFtoa#3(); endif;
+def strconv.bigFtoa#1():
+    call strconv.roundShortest();
+    if call strconv.bigFtoa#4(); else call strconv.bigFtoa#6(); endif;
+def strconv.bigFtoa#2():
+    call strconv.formatDigits();
+def strconv.bigFtoa#3():
+    if call strconv.bigFtoa#12(); else call strconv.bigFtoa#14(); endif;
+def strconv.bigFtoa#4():
+    call strconv.bigFtoa#2();
+def strconv.bigFtoa#5():
+    call strconv.max();
+    call strconv.bigFtoa#2();
+def strconv.bigFtoa#6():
+    if call strconv.bigFtoa#4(); else call strconv.bigFtoa#7(); endif;
+def strconv.bigFtoa#7():
+    if call strconv.bigFtoa#5(); else call strconv.bigFtoa#9(); endif;
+def strconv.bigFtoa#8():
+    call strconv.bigFtoa#2();
+def strconv.bigFtoa#9():
+    if call strconv.bigFtoa#8(); else call strconv.bigFtoa#10(); endif;
+def strconv.bigFtoa#10():
+    if call strconv.bigFtoa#8(); else call strconv.bigFtoa#2(); endif;
+def strconv.bigFtoa#11():
+    call strconv.bigFtoa#2();
+def strconv.bigFtoa#12():
+    call strconv.Round();
+    call strconv.bigFtoa#11();
+def strconv.bigFtoa#13():
+    call strconv.Round();
+    call strconv.bigFtoa#11();
+def strconv.bigFtoa#14():
+    if call strconv.bigFtoa#12(); else call strconv.bigFtoa#15(); endif;
+def strconv.bigFtoa#15():
+    if call strconv.bigFtoa#13(); else call strconv.bigFtoa#17(); endif;
+def strconv.bigFtoa#16():
+    if call strconv.bigFtoa#19(); else call strconv.bigFtoa#20(); endif;
+def strconv.bigFtoa#17():
+    if call strconv.bigFtoa#16(); else call strconv.bigFtoa#18(); endif;
+def strconv.bigFtoa#18():
+    if call strconv.bigFtoa#16(); else call strconv.bigFtoa#11(); endif;
+def strconv.bigFtoa#19():
+    call strconv.bigFtoa#20();
+def strconv.bigFtoa#20():
+    call strconv.Round();
+    call strconv.bigFtoa#11();
+def strconv.adjustLastDigitFixed():
+    if call strconv.adjustLastDigitFixed#1(); else call strconv.adjustLastDigitFixed#2(); endif;
+def strconv.adjustLastDigitFixed#1():
+    tau;
+def strconv.adjustLastDigitFixed#2():
+    if call strconv.adjustLastDigitFixed#3(); else call strconv.adjustLastDigitFixed#4(); endif;
+def strconv.adjustLastDigitFixed#3():
+    tau;
+def strconv.adjustLastDigitFixed#4():
+    if call strconv.adjustLastDigitFixed#5(); else call strconv.adjustLastDigitFixed#6(); endif;
+def strconv.adjustLastDigitFixed#5():
+    tau;
+def strconv.adjustLastDigitFixed#6():
+    if call strconv.adjustLastDigitFixed#7(); else call strconv.adjustLastDigitFixed#8(); endif;
+def strconv.adjustLastDigitFixed#7():
+    call strconv.adjustLastDigitFixed#11();
+def strconv.adjustLastDigitFixed#8():
+    tau;
+def strconv.adjustLastDigitFixed#9():
+    if call strconv.adjustLastDigitFixed#12(); else call strconv.adjustLastDigitFixed#10(); endif;
+def strconv.adjustLastDigitFixed#10():
+    if call strconv.adjustLastDigitFixed#13(); else call strconv.adjustLastDigitFixed#15(); endif;
+def strconv.adjustLastDigitFixed#11():
+    if call strconv.adjustLastDigitFixed#9(); else call strconv.adjustLastDigitFixed#10(); endif;
+def strconv.adjustLastDigitFixed#12():
+    call strconv.adjustLastDigitFixed#11();
+def strconv.adjustLastDigitFixed#13():
+    call strconv.adjustLastDigitFixed#14();
+def strconv.adjustLastDigitFixed#14():
+    tau;
+def strconv.adjustLastDigitFixed#15():
+    call strconv.adjustLastDigitFixed#14();
+def strconv.FixedDecimal():
+    if call strconv.FixedDecimal#1(); else call strconv.FixedDecimal#2(); endif;
+def strconv.FixedDecimal#1():
+    tau;
+def strconv.FixedDecimal#2():
+    if call strconv.FixedDecimal#3(); else call strconv.FixedDecimal#4(); endif;
+def strconv.FixedDecimal#3():
+    tau;
+def strconv.FixedDecimal#4():
+    call strconv.Normalize();
+    call strconv.frexp10();
+    call strconv.FixedDecimal#7();
+def strconv.FixedDecimal#5():
+    if call strconv.FixedDecimal#8(); else call strconv.FixedDecimal#9(); endif;
+def strconv.FixedDecimal#6():
+    if call strconv.FixedDecimal#10(); else call strconv.FixedDecimal#12(); endif;
+def strconv.FixedDecimal#7():
+    if call strconv.FixedDecimal#5(); else call strconv.FixedDecimal#6(); endif;
+def strconv.FixedDecimal#8():
+    call strconv.FixedDecimal#6();
+def strconv.FixedDecimal#9():
+    call strconv.FixedDecimal#7();
+def strconv.FixedDecimal#10():
+    call strconv.FixedDecimal#11();
+def strconv.FixedDecimal#11():
+    call strconv.FixedDecimal#15();
+def strconv.FixedDecimal#12():
+    call strconv.FixedDecimal#11();
+def strconv.FixedDecimal#13():
+    call strconv.FixedDecimal#15();
+def strconv.FixedDecimal#14():
+    call strconv.FixedDecimal#18();
+def strconv.FixedDecimal#15():
+    if call strconv.FixedDecimal#13(); else call strconv.FixedDecimal#14(); endif;
+def strconv.FixedDecimal#16():
+    call strconv.FixedDecimal#18();
+def strconv.FixedDecimal#17():
+    if call strconv.FixedDecimal#19(); else call strconv.FixedDecimal#20(); endif;
+def strconv.FixedDecimal#18():
+    if call strconv.FixedDecimal#16(); else call strconv.FixedDecimal#17(); endif;
+def strconv.FixedDecimal#19():
+    if call strconv.FixedDecimal#21(); else call strconv.FixedDecimal#22(); endif;
+def strconv.FixedDecimal#20():
+    call strconv.adjustLastDigitFixed();
+    if call strconv.FixedDecimal#29(); else call strconv.FixedDecimal#28(); endif;
+def strconv.FixedDecimal#21():
+    tau;
+def strconv.FixedDecimal#22():
+    tau;
+def strconv.FixedDecimal#23():
+    if call strconv.FixedDecimal#26(); else call strconv.FixedDecimal#27(); endif;
+def strconv.FixedDecimal#24():
+    call strconv.FixedDecimal#20();
+def strconv.FixedDecimal#25():
+    if call strconv.FixedDecimal#23(); else call strconv.FixedDecimal#24(); endif;
+def strconv.FixedDecimal#26():
+    tau;
+def strconv.FixedDecimal#27():
+    call strconv.FixedDecimal#25();
+def strconv.FixedDecimal#28():
+    tau;
+def strconv.FixedDecimal#29():
+    call strconv.FixedDecimal#32();
+def strconv.FixedDecimal#30():
+    if call strconv.FixedDecimal#33(); else call strconv.FixedDecimal#34(); endif;
+def strconv.FixedDecimal#31():
+    tau;
+def strconv.FixedDecimal#32():
+    if call strconv.FixedDecimal#30(); else call strconv.FixedDecimal#31(); endif;
+def strconv.FixedDecimal#33():
+    call strconv.FixedDecimal#31();
+def strconv.FixedDecimal#34():
+    call strconv.FixedDecimal#32();
+def math.Float64bits():
+    tau;
+def strconv.genericFtoa():
+    if call strconv.genericFtoa#2(); else call strconv.genericFtoa#4(); endif;
+def strconv.genericFtoa#1():
+    if call strconv.genericFtoa#7(); else call strconv.genericFtoa#9(); endif;
+def strconv.genericFtoa#2():
+    call math.Float32bits();
+    call strconv.genericFtoa#1();
+def strconv.genericFtoa#3():
+    call math.Float64bits();
+    call strconv.genericFtoa#1();
+def strconv.genericFtoa#4():
+    if call strconv.genericFtoa#3(); else call strconv.genericFtoa#5(); endif;
+def strconv.genericFtoa#5():
+    tau;
+def strconv.genericFtoa#6():
+    if call strconv.genericFtoa#16(); else call strconv.genericFtoa#17(); endif;
+def strconv.genericFtoa#7():
+    if call strconv.genericFtoa#11(); else call strconv.genericFtoa#13(); endif;
+def strconv.genericFtoa#8():
+    call strconv.genericFtoa#6();
+def strconv.genericFtoa#9():
+    if call strconv.genericFtoa#8(); else call strconv.genericFtoa#15(); endif;
+def strconv.genericFtoa#10():
+    tau;
+def strconv.genericFtoa#11():
+    call strconv.genericFtoa#10();
+def strconv.genericFtoa#12():
+    call strconv.genericFtoa#10();
+def strconv.genericFtoa#13():
+    if call strconv.genericFtoa#12(); else call strconv.genericFtoa#14(); endif;
+def strconv.genericFtoa#14():
+    call strconv.genericFtoa#10();
+def strconv.genericFtoa#15():
+    call strconv.genericFtoa#6();
+def strconv.genericFtoa#16():
+    call strconv.fmtB();
+def strconv.genericFtoa#17():
+    if call strconv.genericFtoa#19(); else call strconv.genericFtoa#18(); endif;
+def strconv.genericFtoa#18():
+    call strconv.bigFtoa();
+def strconv.genericFtoa#19():
+    if call strconv.genericFtoa#20(); else call strconv.genericFtoa#22(); endif;
+def strconv.genericFtoa#20():
+    call strconv.AssignComputeBounds();
+    call strconv.ShortestDecimal();
+    if call strconv.genericFtoa#24(); else call strconv.genericFtoa#23(); endif;
+def strconv.genericFtoa#21():
+    if call strconv.genericFtoa#43(); else call strconv.genericFtoa#42(); endif;
+def strconv.genericFtoa#22():
+    if call strconv.genericFtoa#32(); else call strconv.genericFtoa#21(); endif;
+def strconv.genericFtoa#23():
+    call strconv.bigFtoa();
+def strconv.genericFtoa#24():
+    if call strconv.genericFtoa#25(); else call strconv.genericFtoa#27(); endif;
+def strconv.genericFtoa#25():
+    call strconv.max();
+    call strconv.genericFtoa#21();
+def strconv.genericFtoa#26():
+    call strconv.max();
+    call strconv.genericFtoa#21();
+def strconv.genericFtoa#27():
+    if call strconv.genericFtoa#25(); else call strconv.genericFtoa#28(); endif;
+def strconv.genericFtoa#28():
+    if call strconv.genericFtoa#26(); else call strconv.genericFtoa#30(); endif;
+def strconv.genericFtoa#29():
+    call strconv.genericFtoa#21();
+def strconv.genericFtoa#30():
+    if call strconv.genericFtoa#29(); else call strconv.genericFtoa#31(); endif;
+def strconv.genericFtoa#31():
+    if call strconv.genericFtoa#29(); else call strconv.genericFtoa#21(); endif;
+def strconv.genericFtoa#32():
+    if call strconv.genericFtoa#34(); else call strconv.genericFtoa#36(); endif;
+def strconv.genericFtoa#33():
+    if call strconv.genericFtoa#41(); else call strconv.genericFtoa#21(); endif;
+def strconv.genericFtoa#34():
+    call strconv.genericFtoa#33();
+def strconv.genericFtoa#35():
+    if call strconv.genericFtoa#39(); else call strconv.genericFtoa#40(); endif;
+def strconv.genericFtoa#36():
+    if call strconv.genericFtoa#34(); else call strconv.genericFtoa#37(); endif;
+def strconv.genericFtoa#37():
+    if call strconv.genericFtoa#35(); else call strconv.genericFtoa#38(); endif;
+def strconv.genericFtoa#38():
+    if call strconv.genericFtoa#35(); else call strconv.genericFtoa#33(); endif;
+def strconv.genericFtoa#39():
+    call strconv.genericFtoa#40();
+def strconv.genericFtoa#40():
+    call strconv.genericFtoa#33();
+def strconv.genericFtoa#41():
+    call strconv.FixedDecimal();
+    call strconv.genericFtoa#21();
+def strconv.genericFtoa#42():
+    call strconv.bigFtoa();
+def strconv.genericFtoa#43():
+    call strconv.formatDigits();
+def strconv.AppendFloat():
+    call strconv.genericFtoa();
+def fmt.fmt_float():
+    if call fmt.fmt_float#1(); else call fmt.fmt_float#2(); endif;
+def fmt.fmt_float#1():
+    call fmt.fmt_float#2();
+def fmt.fmt_float#2():
+    call strconv.AppendFloat();
+    if call fmt.fmt_float#3(); else call fmt.fmt_float#6(); endif;
+def fmt.fmt_float#3():
+    call fmt.fmt_float#4();
+def fmt.fmt_float#4():
+    if call fmt.fmt_float#10(); else call fmt.fmt_float#8(); endif;
+def fmt.fmt_float#5():
+    call fmt.fmt_float#4();
+def fmt.fmt_float#6():
+    tau;
+def fmt.fmt_float#7():
+    call fmt.fmt_float#8();
+def fmt.fmt_float#8():
+    if call fmt.fmt_float#11(); else call fmt.fmt_float#13(); endif;
+def fmt.fmt_float#9():
+    tau;
+def fmt.fmt_float#10():
+    tau;
+def fmt.fmt_float#11():
+    if call fmt.fmt_float#17(); else call fmt.fmt_float#15(); endif;
+def fmt.fmt_float#12():
+    if call fmt.fmt_float#18(); else call fmt.fmt_float#20(); endif;
+def fmt.fmt_float#13():
+    tau;
+def fmt.fmt_float#14():
+    call fmt.fmt_float#15();
+def fmt.fmt_float#15():
+    call fmt.pad();
+def fmt.fmt_float#16():
+    tau;
+def fmt.fmt_float#17():
+    tau;
+def fmt.fmt_float#18():
+    if call fmt.fmt_float#24(); else call fmt.fmt_float#22(); endif;
+def fmt.fmt_float#19():
+    call fmt.pad();
+def fmt.fmt_float#20():
+    tau;
+def fmt.fmt_float#21():
+    call fmt.WriteByte();
+    call fmt.writePadding();
+    call fmt.Write();
+def fmt.fmt_float#22():
+    call fmt.pad();
+def fmt.fmt_float#23():
+    tau;
+def fmt.fmt_float#24():
+    tau;
+def fmt.fmtFloat():
+    if call fmt.fmtFloat#2(); else call fmt.fmtFloat#4(); endif;
+def fmt.fmtFloat#1():
+    tau;
+def fmt.fmtFloat#2():
+    call fmt.fmt_float();
+    call fmt.fmtFloat#1();
+def fmt.fmtFloat#3():
+    call fmt.fmt_float();
+    call fmt.fmtFloat#1();
+def fmt.fmtFloat#4():
+    if call fmt.fmtFloat#3(); else call fmt.fmtFloat#6(); endif;
+def fmt.fmtFloat#5():
+    call fmt.fmt_float();
+    call fmt.fmtFloat#1();
+def fmt.fmtFloat#6():
+    if call fmt.fmtFloat#3(); else call fmt.fmtFloat#7(); endif;
+def fmt.fmtFloat#7():
+    if call fmt.fmtFloat#3(); else call fmt.fmtFloat#8(); endif;
+def fmt.fmtFloat#8():
+    if call fmt.fmtFloat#5(); else call fmt.fmtFloat#10(); endif;
+def fmt.fmtFloat#9():
+    call fmt.fmt_float();
+    call fmt.fmtFloat#1();
+def fmt.fmtFloat#10():
+    if call fmt.fmtFloat#5(); else call fmt.fmtFloat#11(); endif;
+def fmt.fmtFloat#11():
+    if call fmt.fmtFloat#5(); else call fmt.fmtFloat#12(); endif;
+def fmt.fmtFloat#12():
+    if call fmt.fmtFloat#9(); else call fmt.fmtFloat#13(); endif;
+def fmt.fmtFloat#13():
+    call fmt.badVerb();
+    call fmt.fmtFloat#1();
+def fmt.fmtComplex():
+    if call fmt.fmtComplex#2(); else call fmt.fmtComplex#3(); endif;
+def fmt.fmtComplex#1():
+    tau;
+def fmt.fmtComplex#2():
+    call fmt.WriteByte();
+    call fmt.fmtFloat();
+    call fmt.fmtFloat();
+    call fmt.WriteString();
+    call fmt.fmtComplex#1();
+def fmt.fmtComplex#3():
+    if call fmt.fmtComplex#2(); else call fmt.fmtComplex#4(); endif;
+def fmt.fmtComplex#4():
+    if call fmt.fmtComplex#2(); else call fmt.fmtComplex#5(); endif;
+def fmt.fmtComplex#5():
+    if call fmt.fmtComplex#2(); else call fmt.fmtComplex#6(); endif;
+def fmt.fmtComplex#6():
+    if call fmt.fmtComplex#2(); else call fmt.fmtComplex#7(); endif;
+def fmt.fmtComplex#7():
+    if call fmt.fmtComplex#2(); else call fmt.fmtComplex#8(); endif;
+def fmt.fmtComplex#8():
+    if call fmt.fmtComplex#2(); else call fmt.fmtComplex#9(); endif;
+def fmt.fmtComplex#9():
+    if call fmt.fmtComplex#2(); else call fmt.fmtComplex#10(); endif;
+def fmt.fmtComplex#10():
+    call fmt.badVerb();
+    call fmt.fmtComplex#1();
+def fmt.getField():
+    if call fmt.getField#3(); else call fmt.getField#2(); endif;
+def fmt.getField#1():
+    call fmt.getField#2();
+def fmt.getField#2():
+    tau;
+def fmt.getField#3():
+    tau;
+def fmt.fmt_bx():
+    call fmt.fmt_sbx();
+def fmt.fmtPointer():
+    if call fmt.fmtPointer#1(); else call fmt.fmtPointer#2(); endif;
+def fmt.fmtPointer#1():
+    if call fmt.fmtPointer#9(); else call fmt.fmtPointer#11(); endif;
+def fmt.fmtPointer#2():
+    if call fmt.fmtPointer#1(); else call fmt.fmtPointer#3(); endif;
+def fmt.fmtPointer#3():
+    if call fmt.fmtPointer#1(); else call fmt.fmtPointer#4(); endif;
+def fmt.fmtPointer#4():
+    if call fmt.fmtPointer#1(); else call fmt.fmtPointer#5(); endif;
+def fmt.fmtPointer#5():
+    if call fmt.fmtPointer#1(); else call fmt.fmtPointer#6(); endif;
+def fmt.fmtPointer#6():
+    if call fmt.fmtPointer#1(); else call fmt.fmtPointer#7(); endif;
+def fmt.fmtPointer#7():
+    call fmt.badVerb();
+def fmt.fmtPointer#8():
+    tau;
+def fmt.fmtPointer#9():
+    if call fmt.fmtPointer#12(); else call fmt.fmtPointer#13(); endif;
+def fmt.fmtPointer#10():
+    call fmt.fmtPointer#8();
+def fmt.fmtPointer#11():
+    if call fmt.fmtPointer#10(); else call fmt.fmtPointer#20(); endif;
+def fmt.fmtPointer#12():
+    if call fmt.fmtPointer#14(); else call fmt.fmtPointer#16(); endif;
+def fmt.fmtPointer#13():
+    if call fmt.fmtPointer#17(); else call fmt.fmtPointer#18(); endif;
+def fmt.fmtPointer#14():
+    call fmt.fmtPointer#15();
+def fmt.fmtPointer#15():
+    call fmt.fmtPointer#8();
+def fmt.fmtPointer#16():
+    call fmt.fmtPointer#15();
+def fmt.fmtPointer#17():
+    call fmt.fmtPointer#8();
+def fmt.fmtPointer#18():
+    call fmt.fmtPointer#8();
+def fmt.fmtPointer#19():
+    call fmt.fmtPointer#8();
+def fmt.fmtPointer#20():
+    if call fmt.fmtPointer#19(); else call fmt.fmtPointer#21(); endif;
+def fmt.fmtPointer#21():
+    if call fmt.fmtPointer#19(); else call fmt.fmtPointer#22(); endif;
+def fmt.fmtPointer#22():
+    if call fmt.fmtPointer#19(); else call fmt.fmtPointer#23(); endif;
+def fmt.fmtPointer#23():
+    if call fmt.fmtPointer#19(); else call fmt.fmtPointer#24(); endif;
+def fmt.fmtPointer#24():
+    if call fmt.fmtPointer#19(); else call fmt.fmtPointer#25(); endif;
+def fmt.fmtPointer#25():
+    call fmt.badVerb();
+    call fmt.fmtPointer#8();
+def fmt.unknownType():
+    if call fmt.unknownType#2(); else call fmt.unknownType#1(); endif;
+def fmt.unknownType#1():
+    call fmt.WriteString();
+def fmt.unknownType#2():
+    call fmt.WriteByte();
+    call fmt.WriteString();
+    call fmt.WriteByte();
+def fmt.printValue():
+    if call fmt.printValue#4(); else call fmt.printValue#2(); endif;
+def fmt.printValue#1():
+    if call fmt.printValue#5(); else call fmt.printValue#2(); endif;
+def fmt.printValue#2():
+    if call fmt.printValue#7(); else call fmt.printValue#9(); endif;
+def fmt.printValue#3():
+    tau;
+def fmt.printValue#4():
+    tau;
+def fmt.printValue#5():
+    tau;
+def fmt.printValue#6():
+    tau;
+def fmt.printValue#7():
+    if call fmt.printValue#10(); else call fmt.printValue#11(); endif;
+def fmt.printValue#8():
+    call fmt.printValue#6();
+def fmt.printValue#9():
+    if call fmt.printValue#8(); else call fmt.printValue#15(); endif;
+def fmt.printValue#10():
+    call fmt.printValue#6();
+def fmt.printValue#11():
+    if call fmt.printValue#12(); else call fmt.printValue#13(); endif;
+def fmt.printValue#12():
+    call fmt.printValue#6();
+def fmt.printValue#13():
+    call fmt.printValue#6();
+def fmt.printValue#14():
+    call fmt.printValue#6();
+def fmt.printValue#15():
+    if call fmt.printValue#14(); else call fmt.printValue#17(); endif;
+def fmt.printValue#16():
+    call fmt.printValue#6();
+def fmt.printValue#17():
+    if call fmt.printValue#14(); else call fmt.printValue#18(); endif;
+def fmt.printValue#18():
+    if call fmt.printValue#14(); else call fmt.printValue#19(); endif;
+def fmt.printValue#19():
+    if call fmt.printValue#14(); else call fmt.printValue#20(); endif;
+def fmt.printValue#20():
+    if call fmt.printValue#14(); else call fmt.printValue#21(); endif;
+def fmt.printValue#21():
+    if call fmt.printValue#16(); else call fmt.printValue#23(); endif;
+def fmt.printValue#22():
+    call fmt.printValue#6();
+def fmt.printValue#23():
+    if call fmt.printValue#16(); else call fmt.printValue#24(); endif;
+def fmt.printValue#24():
+    if call fmt.printValue#16(); else call fmt.printValue#25(); endif;
+def fmt.printValue#25():
+    if call fmt.printValue#16(); else call fmt.printValue#26(); endif;
+def fmt.printValue#26():
+    if call fmt.printValue#16(); else call fmt.printValue#27(); endif;
+def fmt.printValue#27():
+    if call fmt.printValue#16(); else call fmt.printValue#28(); endif;
+def fmt.printValue#28():
+    if call fmt.printValue#22(); else call fmt.printValue#30(); endif;
+def fmt.printValue#29():
+    call fmt.printValue#6();
+def fmt.printValue#30():
+    if call fmt.printValue#29(); else call fmt.printValue#32(); endif;
+def fmt.printValue#31():
+    call fmt.printValue#6();
+def fmt.printValue#32():
+    if call fmt.printValue#31(); else call fmt.printValue#34(); endif;
+def fmt.printValue#33():
+    call fmt.printValue#6();
+def fmt.printValue#34():
+    if call fmt.printValue#33(); else call fmt.printValue#36(); endif;
+def fmt.printValue#35():
+    call fmt.printValue#6();
+def fmt.printValue#36():
+    if call fmt.printValue#35(); else call fmt.printValue#38(); endif;
+def fmt.printValue#37():
+    if call fmt.printValue#41(); else call fmt.printValue#43(); endif;
+def fmt.printValue#38():
+    if call fmt.printValue#37(); else call fmt.printValue#40(); endif;
+def fmt.printValue#39():
+    if call fmt.printValue#57(); else call fmt.printValue#58(); endif;
+def fmt.printValue#40():
+    if call fmt.printValue#39(); else call fmt.printValue#56(); endif;
+def fmt.printValue#41():
+    if call fmt.printValue#44(); else call fmt.printValue#45(); endif;
+def fmt.printValue#42():
+    call fmt.printValue#46();
+def fmt.printValue#43():
+    call fmt.printValue#42();
+def fmt.printValue#44():
+    tau;
+def fmt.printValue#45():
+    call fmt.printValue#42();
+def fmt.printValue#46():
+    if call fmt.printValue#47(); else call fmt.printValue#48(); endif;
+def fmt.printValue#47():
+    if call fmt.printValue#49(); else call fmt.printValue#50(); endif;
+def fmt.printValue#48():
+    if call fmt.printValue#53(); else call fmt.printValue#54(); endif;
+def fmt.printValue#49():
+    if call fmt.printValue#51(); else call fmt.printValue#52(); endif;
+def fmt.printValue#50():
+    call fmt.printValue#46();
+def fmt.printValue#51():
+    call fmt.printValue#50();
+def fmt.printValue#52():
+    call fmt.printValue#50();
+def fmt.printValue#53():
+    call fmt.printValue#6();
+def fmt.printValue#54():
+    call fmt.printValue#6();
+def fmt.printValue#55():
+    if call fmt.printValue#73(); else call fmt.printValue#72(); endif;
+def fmt.printValue#56():
+    if call fmt.printValue#55(); else call fmt.printValue#71(); endif;
+def fmt.printValue#57():
+    call fmt.printValue#58();
+def fmt.printValue#58():
+    call fmt.printValue#61();
+def fmt.printValue#59():
+    if call fmt.printValue#62(); else call fmt.printValue#63(); endif;
+def fmt.printValue#60():
+    call fmt.printValue#6();
+def fmt.printValue#61():
+    ifFor (int t142 = 0; (t142<t144); t142 = t142 + 1) then call fmt.printValue#59(); else call fmt.printValue#60(); endif;
+def fmt.printValue#62():
+    if call fmt.printValue#64(); else call fmt.printValue#65(); endif;
+def fmt.printValue#63():
+    if call fmt.printValue#66(); else call fmt.printValue#68(); endif;
+def fmt.printValue#64():
+    call fmt.printValue#63();
+def fmt.printValue#65():
+    call fmt.printValue#63();
+def fmt.printValue#66():
+    if call fmt.printValue#69(); else call fmt.printValue#67(); endif;
+def fmt.printValue#67():
+    call fmt.printValue#61();
+def fmt.printValue#68():
+    tau;
+def fmt.printValue#69():
+    call fmt.printValue#67();
+def fmt.printValue#70():
+    if call fmt.printValue#80(); else call fmt.printValue#81(); endif;
+def fmt.printValue#71():
+    if call fmt.printValue#70(); else call fmt.printValue#77(); endif;
+def fmt.printValue#72():
+    if call fmt.printValue#74(); else call fmt.printValue#75(); endif;
+def fmt.printValue#73():
+    call fmt.printValue#6();
+def fmt.printValue#74():
+    call fmt.printValue#6();
+def fmt.printValue#75():
+    call fmt.printValue#6();
+def fmt.printValue#76():
+    if call fmt.printValue#110(); else call fmt.printValue#107(); endif;
+def fmt.printValue#77():
+    if call fmt.printValue#70(); else call fmt.printValue#78(); endif;
+def fmt.printValue#78():
+    if call fmt.printValue#76(); else call fmt.printValue#108(); endif;
+def fmt.printValue#79():
+    if call fmt.printValue#92(); else call fmt.printValue#93(); endif;
+def fmt.printValue#80():
+    if call fmt.printValue#84(); else call fmt.printValue#79(); endif;
+def fmt.printValue#81():
+    if call fmt.printValue#80(); else call fmt.printValue#82(); endif;
+def fmt.printValue#82():
+    if call fmt.printValue#80(); else call fmt.printValue#83(); endif;
+def fmt.printValue#83():
+    if call fmt.printValue#80(); else call fmt.printValue#79(); endif;
+def fmt.printValue#84():
+    if call fmt.printValue#85(); else call fmt.printValue#87(); endif;
+def fmt.printValue#85():
+    call fmt.printValue#86();
+def fmt.printValue#86():
+    tau;
+def fmt.printValue#87():
+    if call fmt.printValue#88(); else call fmt.printValue#89(); endif;
+def fmt.printValue#88():
+    call fmt.printValue#86();
+def fmt.printValue#89():
+    call fmt.printValue#90();
+def fmt.printValue#90():
+    if call fmt.printValue#91(); else call fmt.printValue#86(); endif;
+def fmt.printValue#91():
+    call fmt.printValue#90();
+def fmt.printValue#92():
+    if call fmt.printValue#96(); else call fmt.printValue#95(); endif;
+def fmt.printValue#93():
+    call fmt.printValue#104();
+def fmt.printValue#94():
+    tau;
+def fmt.printValue#95():
+    call fmt.printValue#99();
+def fmt.printValue#96():
+    tau;
+def fmt.printValue#97():
+    if call fmt.printValue#100(); else call fmt.printValue#101(); endif;
+def fmt.printValue#98():
+    call fmt.printValue#6();
+def fmt.printValue#99():
+    ifFor (int t255 = 0; (t255<t257); t255 = t255 + 1) then call fmt.printValue#97(); else call fmt.printValue#98(); endif;
+def fmt.printValue#100():
+    call fmt.printValue#101();
+def fmt.printValue#101():
+    call fmt.printValue#99();
+def fmt.printValue#102():
+    if call fmt.printValue#105(); else call fmt.printValue#106(); endif;
+def fmt.printValue#103():
+    call fmt.printValue#6();
+def fmt.printValue#104():
+    ifFor (int t269 = 0; (t269<t271); t269 = t269 + 1) then call fmt.printValue#102(); else call fmt.printValue#103(); endif;
+def fmt.printValue#105():
+    call fmt.printValue#106();
+def fmt.printValue#106():
+    call fmt.printValue#104();
+def fmt.printValue#107():
+    call fmt.fmtPointer();
+    call fmt.printValue#6();
+def fmt.printValue#108():
+    if call fmt.printValue#107(); else call fmt.printValue#115(); endif;
+def fmt.printValue#109():
+    if call fmt.printValue#111(); else call fmt.printValue#112(); endif;
+def fmt.printValue#110():
+    tau;
+def fmt.printValue#111():
+    tau;
+def fmt.printValue#112():
+    if call fmt.printValue#111(); else call fmt.printValue#113(); endif;
+def fmt.printValue#113():
+    if call fmt.printValue#111(); else call fmt.printValue#114(); endif;
+def fmt.printValue#114():
+    if call fmt.printValue#111(); else call fmt.printValue#107(); endif;
+def fmt.printValue#115():
+    if call fmt.printValue#107(); else call fmt.printValue#116(); endif;
+def fmt.printValue#116():
+    if call fmt.printValue#107(); else call fmt.printValue#117(); endif;
+def fmt.printValue#117():
+    call fmt.unknownType();
+    call fmt.printValue#6();
+def fmt.fmtBytes():
+    if call fmt.fmtBytes#2(); else call fmt.fmtBytes#4(); endif;
+def fmt.fmtBytes#1():
+    tau;
+def fmt.fmtBytes#2():
+    if call fmt.fmtBytes#6(); else call fmt.fmtBytes#7(); endif;
+def fmt.fmtBytes#3():
+    call fmt.fmt_s();
+    call fmt.fmtBytes#1();
+def fmt.fmtBytes#4():
+    if call fmt.fmtBytes#2(); else call fmt.fmtBytes#5(); endif;
+def fmt.fmtBytes#5():
+    if call fmt.fmtBytes#3(); else call fmt.fmtBytes#21(); endif;
+def fmt.fmtBytes#6():
+    call fmt.WriteString();
+    if call fmt.fmtBytes#8(); else call fmt.fmtBytes#9(); endif;
+def fmt.fmtBytes#7():
+    call fmt.WriteByte();
+    call fmt.fmtBytes#15();
+def fmt.fmtBytes#8():
+    call fmt.WriteString();
+def fmt.fmtBytes#9():
+    call fmt.WriteByte();
+    call fmt.fmtBytes#10();
+def fmt.fmtBytes#10():
+    if call fmt.fmtBytes#11(); else call fmt.fmtBytes#12(); endif;
+def fmt.fmtBytes#11():
+    if call fmt.fmtBytes#13(); else call fmt.fmtBytes#14(); endif;
+def fmt.fmtBytes#12():
+    call fmt.WriteByte();
+    call fmt.fmtBytes#1();
+def fmt.fmtBytes#13():
+    call fmt.WriteString();
+    call fmt.fmtBytes#14();
+def fmt.fmtBytes#14():
+    call fmt.fmt0x64();
+    call fmt.fmtBytes#10();
+def fmt.fmtBytes#15():
+    if call fmt.fmtBytes#16(); else call fmt.fmtBytes#17(); endif;
+def fmt.fmtBytes#16():
+    if call fmt.fmtBytes#18(); else call fmt.fmtBytes#19(); endif;
+def fmt.fmtBytes#17():
+    call fmt.WriteByte();
+    call fmt.fmtBytes#1();
+def fmt.fmtBytes#18():
+    call fmt.WriteByte();
+    call fmt.fmtBytes#19();
+def fmt.fmtBytes#19():
+    call fmt.fmt_integer();
+    call fmt.fmtBytes#15();
+def fmt.fmtBytes#20():
+    call fmt.fmt_bx();
+    call fmt.fmtBytes#1();
+def fmt.fmtBytes#21():
+    if call fmt.fmtBytes#20(); else call fmt.fmtBytes#23(); endif;
+def fmt.fmtBytes#22():
+    call fmt.fmt_bx();
+    call fmt.fmtBytes#1();
+def fmt.fmtBytes#23():
+    if call fmt.fmtBytes#22(); else call fmt.fmtBytes#25(); endif;
+def fmt.fmtBytes#24():
+    call fmt.fmt_q();
+    call fmt.fmtBytes#1();
+def fmt.fmtBytes#25():
+    if call fmt.fmtBytes#24(); else call fmt.fmtBytes#26(); endif;
+def fmt.fmtBytes#26():
+    call fmt.printValue();
+    call fmt.fmtBytes#1();
+def fmt.printArg():
+    if call fmt.printArg#1(); else call fmt.printArg#2(); endif;
+def fmt.printArg#1():
+    if call fmt.printArg#4(); else call fmt.printArg#5(); endif;
+def fmt.printArg#2():
+    if call fmt.printArg#7(); else call fmt.printArg#9(); endif;
+def fmt.printArg#3():
+    tau;
+def fmt.printArg#4():
+    call fmt.printArg#3();
+def fmt.printArg#5():
+    if call fmt.printArg#4(); else call fmt.printArg#6(); endif;
+def fmt.printArg#6():
+    call fmt.printArg#3();
+def fmt.printArg#7():
+    call fmt.fmt_s();
+def fmt.printArg#8():
+    call fmt.fmtPointer();
+def fmt.printArg#9():
+    if call fmt.printArg#8(); else call fmt.printArg#10(); endif;
+def fmt.printArg#10():
+    if call fmt.printArg#12(); else call fmt.printArg#13(); endif;
+def fmt.printArg#11():
+    tau;
+def fmt.printArg#12():
+    call fmt.fmtBool();
+    call fmt.printArg#11();
+def fmt.printArg#13():
+    if call fmt.printArg#14(); else call fmt.printArg#15(); endif;
+def fmt.printArg#14():
+    call fmt.fmtFloat();
+    call fmt.printArg#11();
+def fmt.printArg#15():
+    if call fmt.printArg#16(); else call fmt.printArg#17(); endif;
+def fmt.printArg#16():
+    call fmt.fmtFloat();
+    call fmt.printArg#11();
+def fmt.printArg#17():
+    if call fmt.printArg#18(); else call fmt.printArg#19(); endif;
+def fmt.printArg#18():
+    call fmt.fmtComplex();
+    call fmt.printArg#11();
+def fmt.printArg#19():
+    if call fmt.printArg#20(); else call fmt.printArg#21(); endif;
+def fmt.printArg#20():
+    call fmt.fmtComplex();
+    call fmt.printArg#11();
+def fmt.printArg#21():
+    if call fmt.printArg#22(); else call fmt.printArg#23(); endif;
+def fmt.printArg#22():
+    call fmt.fmtInteger();
+    call fmt.printArg#11();
+def fmt.printArg#23():
+    if call fmt.printArg#24(); else call fmt.printArg#25(); endif;
+def fmt.printArg#24():
+    call fmt.fmtInteger();
+    call fmt.printArg#11();
+def fmt.printArg#25():
+    if call fmt.printArg#26(); else call fmt.printArg#27(); endif;
+def fmt.printArg#26():
+    call fmt.fmtInteger();
+    call fmt.printArg#11();
+def fmt.printArg#27():
+    if call fmt.printArg#28(); else call fmt.printArg#29(); endif;
+def fmt.printArg#28():
+    call fmt.fmtInteger();
+    call fmt.printArg#11();
+def fmt.printArg#29():
+    if call fmt.printArg#30(); else call fmt.printArg#31(); endif;
+def fmt.printArg#30():
+    call fmt.fmtInteger();
+    call fmt.printArg#11();
+def fmt.printArg#31():
+    if call fmt.printArg#32(); else call fmt.printArg#33(); endif;
+def fmt.printArg#32():
+    call fmt.fmtInteger();
+    call fmt.printArg#11();
+def fmt.printArg#33():
+    if call fmt.printArg#34(); else call fmt.printArg#35(); endif;
+def fmt.printArg#34():
+    call fmt.fmtInteger();
+    call fmt.printArg#11();
+def fmt.printArg#35():
+    if call fmt.printArg#36(); else call fmt.printArg#37(); endif;
+def fmt.printArg#36():
+    call fmt.fmtInteger();
+    call fmt.printArg#11();
+def fmt.printArg#37():
+    if call fmt.printArg#38(); else call fmt.printArg#39(); endif;
+def fmt.printArg#38():
+    call fmt.fmtInteger();
+    call fmt.printArg#11();
+def fmt.printArg#39():
+    if call fmt.printArg#40(); else call fmt.printArg#41(); endif;
+def fmt.printArg#40():
+    call fmt.fmtInteger();
+    call fmt.printArg#11();
+def fmt.printArg#41():
+    if call fmt.printArg#42(); else call fmt.printArg#43(); endif;
+def fmt.printArg#42():
+    call fmt.fmtInteger();
+    call fmt.printArg#11();
+def fmt.printArg#43():
+    if call fmt.printArg#44(); else call fmt.printArg#45(); endif;
+def fmt.printArg#44():
+    call fmt.fmtString();
+    call fmt.printArg#11();
+def fmt.printArg#45():
+    if call fmt.printArg#46(); else call fmt.printArg#47(); endif;
+def fmt.printArg#46():
+    call fmt.fmtBytes();
+    call fmt.printArg#11();
+def fmt.printArg#47():
+    if call fmt.printArg#48(); else call fmt.printArg#49(); endif;
+def fmt.printArg#48():
+    if call fmt.printArg#52(); else call fmt.printArg#51(); endif;
+def fmt.printArg#49():
+    call fmt.handleMethods();
+    if call fmt.printArg#11(); else call fmt.printArg#54(); endif;
+def fmt.printArg#50():
+    call fmt.handleMethods();
+    if call fmt.printArg#53(); else call fmt.printArg#51(); endif;
+def fmt.printArg#51():
+    call fmt.printValue();
+    call fmt.printArg#11();
+def fmt.printArg#52():
+    tau;
+def fmt.printArg#53():
+    tau;
+def fmt.printArg#54():
+    call fmt.printValue();
+    call fmt.printArg#11();
+def fmt.doPrintln():
+    call fmt.doPrintln#1();
+def fmt.doPrintln#1():
+    if call fmt.doPrintln#2(); else call fmt.doPrintln#3(); endif;
+def fmt.doPrintln#2():
+    if call fmt.doPrintln#4(); else call fmt.doPrintln#5(); endif;
+def fmt.doPrintln#3():
+    call fmt.WriteByte();
+def fmt.doPrintln#4():
+    call fmt.WriteByte();
+    call fmt.doPrintln#5();
+def fmt.doPrintln#5():
+    call fmt.printArg();
+    call fmt.doPrintln#1();
+def internal_race.ReleaseMerge():
+    tau;
+def sync.Put():
+    if call sync.Put#1(); else call sync.Put#2(); endif;
+def sync.Put#1():
+    tau;
+def sync.Put#2():
+    if call sync.Put#3(); else call sync.Put#4(); endif;
+def sync.Put#3():
+    if call sync.Put#5(); else call sync.Put#6(); endif;
+def sync.Put#4():
+    call sync.pin();
+    if call sync.Put#7(); else call sync.Put#8(); endif;
+def sync.Put#5():
+    tau;
+def sync.Put#6():
+    call sync.poolRaceAddr();
+    call internal_race.ReleaseMerge();
+    call internal_race.Disable();
+    call sync.Put#4();
+def sync.Put#7():
+    call sync.Put#8();
+def sync.Put#8():
+    if call sync.Put#9(); else call sync.Put#10(); endif;
+def sync.Put#9():
+    call sync.Lock();
+    call sync.Unlock();
+    call sync.Put#10();
+def sync.Put#10():
+    if call sync.Put#11(); else call sync.Put#12(); endif;
+def sync.Put#11():
+    call internal_race.Enable();
+    call sync.Put#12();
+def sync.Put#12():
+    tau;
+def fmt.free():
+    call sync.Put();
+def fmt.Fprintln():
+    call fmt.newPrinter();
+    call fmt.doPrintln();
+    call fmt.free();
+def fmt.Println():
+    call fmt.Fprintln();

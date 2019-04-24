@@ -1,0 +1,13 @@
+def t0() : let a = newchan ty, 0 ; 
+    	   call t(a);
+	   call t(a);
+	   -- call z(a); -- Not FC with this
+
+def t(x): recv x;
+    	  call s(x);
+
+def s(x): send x;
+    	  call t(x);
+
+
+def z(x): send x; spawn z(x); call z(x);

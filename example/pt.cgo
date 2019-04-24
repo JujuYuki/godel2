@@ -1,0 +1,16 @@
+def main.main():
+    let t0 = newchan main.main.t0_0_0, 0;
+    spawn main.sndXTimes(t0);
+    call main.rcvXTimes(t0);
+
+def main.sndXTimes(t0):
+    if
+        send t0; call main.sndXTimes(t0);
+    else
+    endif;
+
+def main.rcvXTimes(t0):
+    if
+        recv t0; call main.rcvXTimes(t0);
+    else
+    endif;

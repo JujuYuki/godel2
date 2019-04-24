@@ -1,0 +1,13 @@
+def main_main():
+   let t1 = newchan t, 0;
+   spawn main_main_1(t1);
+   recv t1;
+def main_main_1(ch):
+   call main_main_1__3(ch);
+def main_main_1__1(ch):
+   call main_main_1__3(ch);
+def main_main_1__2(ch):
+   send ch;
+def main_main_1__3(ch):
+   if call main_main_1__1(ch); else
+   call main_main_1__2(ch); endif;

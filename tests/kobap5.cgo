@@ -1,0 +1,41 @@
+def main():
+    let a = newchan ty, 0;
+    let b = newchan ty, 0;
+    let c = newchan ty, 0;
+    let d = newchan ty, 0;	
+    spawn X(a,b,c,d);
+    spawn M(c,d);	
+    spawn Wait(a);
+    spawn Wait(b);
+
+def M(c,d):
+    send c;
+    send d;
+    call M(c,d);
+ 
+
+def Wait(x) :
+    recv x;
+    call Wait(x);
+
+
+def X(a,b,c,d):    
+    if
+	select
+	case recv c;
+	     send a;
+	     call X(a,b,c,d);
+
+	case recv d;
+	     send b;
+	     call X(a,b,c,d);
+	endselect;
+      else
+        select
+	case recv c;
+	     call X(a,b,c,d);
+
+	case recv d;
+	     call X(a,b,c,d);
+	endselect;
+endif;
