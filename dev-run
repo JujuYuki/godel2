@@ -1,0 +1,9 @@
+#!/bin/sh
+
+IN_DOCKER_GROUP=$(groups | grep docker)
+if [ "$?" = "0" ] || [ "$USER" = "root" ]; then
+    echo "$(pwd) to be mounted on /root/ inside container"
+    docker run -ti --rm -v $(pwd):/root jgabet/godel2:latest ./Godel $*
+else
+    echo "Cannot run docker: Try running $0 as root"
+fi
