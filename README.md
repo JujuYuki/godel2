@@ -18,7 +18,7 @@ file, for example:
 Run the example with:
 
     docker run -ti --rm -v /tmp:/root jgabet/godel2:latest Godel example.cgo    # Model check
-    docker run -ti --rm -v /tmp:/root jgabet/godel2:latest Godel -T example.cgo # Term check
+    docker run -ti --rm -v /tmp:/root jgabet/godel2:latest Godel -T example.cgo # Termination check
 
 The argument `-v /tmp:/root` puts the `/tmp` directory into the container as
 `/root`, so the `example.cgo` file is found in the container as
