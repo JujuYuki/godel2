@@ -35,32 +35,24 @@ each of them and the expected output — in the
 
 #### Code extraction with `migoinfer`
 
-Given an example Go file, for example:
+Given an example Go file, for example named `example.go`:
 
-    /tmp/example.go
+    cd /path/to/example
+    docker run -ti --rm -v $(pwd):/root jgabet/godel2:latest migoinfer example.go > example.cgo
 
-Extract the MiGo types with:
-
-    docker run -ti --rm -v /tmp:/root jgabet/godel2:latest migoinfer example.go > example.cgo
-
-The extracted MiGo output will be written — as plain text — to:
-
-    /tmp/example.cgo
+The extracted MiGo output will be written to the `example.cgo` file in the directory of the example file.
 
 You may then use this cgo file in the following section for automated analysis.
 
 #### MiGo types analysis with `Godel`
 
-Given an example cgo file, for example:
+Given an example cgo file, run the example with:
 
-    /tmp/example.cgo
+    cd /path/to/example
+    docker run -ti --rm -v $(pwd):/root jgabet/godel2:latest Godel example.cgo    # Model check
+    docker run -ti --rm -v $(pwd):/root jgabet/godel2:latest Godel -T example.cgo # Termination check
 
-Run the example with:
-
-    docker run -ti --rm -v /tmp:/root jgabet/godel2:latest Godel example.cgo    # Model check
-    docker run -ti --rm -v /tmp:/root jgabet/godel2:latest Godel -T example.cgo # Termination check
-
-The argument `-v /tmp:/root` puts the `/tmp` directory into the container as
+The argument `-v $(pwd):/root` puts the current path into the container as
 `/root`, so the `example.cgo` file is found in the container as
 `/root/example.cgo`.
 
@@ -72,7 +64,7 @@ present in the same directory as the docker-run script given in this repository:
 This puts the current path into docker and runs the example inside the container,
 all arguments are passed to the `Godel` binary inside the container, e.g.
 
-    docker-run -T example.cgo # Termination check
+    ./docker-run -T example.cgo # Termination check
 
 Please note, this script currently runs `Godel` only. For automated extraction of MiGo types from 
 a given Go program, please refer to the full command given in the relevant section above.
