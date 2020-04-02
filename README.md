@@ -27,6 +27,12 @@ can be pulled on an existing Docker installation with:
 
     docker pull jgabet/godel2:latest
 
+A few example cgo files are provided with the source of this tool, in the folders 
+`example`, `tests` and `tests-memory`. More examples, used in our benchmarks in the 
+paper, are available — along with their original Go code and a brief description of 
+each of them and the expected output — in the 
+[benchmark repository](https://github.com/JujuYuki/godel2-benchmark). 
+
 #### Code extraction with `migoinfer`
 
 Given an example Go file, for example:
