@@ -16,11 +16,12 @@ contains a development version of `migoinfer`, an inference tool for extracting
 MiGo types from Go code.
 
 > The code for the development build of `migoinfer` included in this docker image 
-> is not currently publicly available, as it is still in development. The original 
+> is available [here](https://github.com/jujuyuki/gospal) 
+> as a fork from the original author's repository. The original 
 > tool is available from [nickng's repository](https://github.com/nickng/gospal), 
 > along with a [development branch](https://github.com/nickng/gospal/tree/race-wip) 
-> — containing part of the additions needed for extracting mutex constructs and 
-> shared memory pointers — that was worked on with him early on in the project.
+> containing the early additions that he helped develop for us early on in the project
+> to add shared memory primitives extraction.
 
 The Docker container, available [here](https://hub.docker.com/r/jgabet/godel2/), 
 can be pulled on an existing Docker installation with:
