@@ -127,7 +127,7 @@ To build them from source, we need the following dependencies
 - OCaml
 
 First download Yices (version 1), visit
-http://yices.csl.sri.com/old/download-yices1.shtml to obtain the package,
+http://yices.csl.sri.com/old/download-yices1.html to obtain the package,
 extract and make the `yices` binary available in `$PATH`.
 
 On Ubuntu, the other dependencies can be installed via `apt-get`:
