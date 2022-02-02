@@ -280,7 +280,7 @@ parseModelChecker debug bool model formula =
              ++
              (if debug then " --timings " else "")
              ++
-             " -esome -s1"
+             " -s1"
              ++
              (if debug then " -v" else " -q")
   in do out <- readProcess "bash" ["-c",mcmd] []

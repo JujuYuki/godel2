@@ -351,7 +351,7 @@ genProgram (P xs@((D t0 args t):ys)) =
         eqvarlist = foldr (++) [] $ map genVar allvars
         eqmutlist = foldr (++) [] $ map genMut allmuts
         allguards = nub $ foldr (++) [] $ map (getGuards) (eqlist++eqchanlist++eqvarlist++eqmutlist)
-        allactions = nub $ foldr (++) [] $ map (getActions . snd) (eqlist++eqchanlist)
+        allactions = nub $ foldr (++) [] $ map (getActions . snd) (eqlist++eqchanlist++eqmutlist)
         commactions = filter (\((s,r),t) -> s `elem` allactions || r `elem` allactions) $
                       foldr (++) [] $
                       ((map mkRelabel allchans)++(map mkRelabelVar allvars)++(map mkRelabelMut allmuts))
