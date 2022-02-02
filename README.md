@@ -2,49 +2,85 @@
 
 ## Go Model Checker for MiGo types
 
-Godel 2 is a model checker for MiGo types, extending [Godel Checker](https://bitbucket.org/MobilityReadingGroup/godel-checker)
+Godel 2 is a model checker for extended MiGo types. 
+This tool is extending [Godel Checker](https://bitbucket.org/MobilityReadingGroup/godel-checker).
 
-### Run via Docker
+### Option 1: Run via Docker
 
-There are many external dependencies in this tool, the easiest way to get
+There are many external dependencies to this tool, the easiest way to get
 started is to run via a [Docker](http://www.docker.com) container.
 
-The docker container contains all dependencies build with the latest version of
-`Godel`, where the container is built from latest commits. Given an example cgo
-file, for example:
+The Docker container contains all dependencies build with the latest version of 
+`Godel`, where the container is built from latest commits. The container also 
+contains a development version of `migoinfer`, an inference tool for extracting 
+MiGo types from Go code.
 
-    /tmp/example.cgo
+> The code for the development build of `migoinfer` included in this docker image 
+> is available [here](https://github.com/jujuyuki/gospal) 
+> as a fork from the original author's repository. The original 
+> tool is available from [nickng's repository](https://github.com/nickng/gospal), 
+> along with a [development branch](https://github.com/nickng/gospal/tree/race-wip) 
+> containing the early additions that he helped develop for us early on in the project
+> to add shared memory primitives extraction.
 
-Run the example with:
+The Docker container, available [here](https://hub.docker.com/r/jgabet/godel2/), 
+can be pulled on an existing Docker installation with:
 
-    docker run -ti --rm -v /tmp:/root jgabet/godel2:latest Godel example.cgo    # Model check
-    docker run -ti --rm -v /tmp:/root jgabet/godel2:latest Godel -T example.cgo # Term check
+    docker pull jgabet/godel2:latest
 
-The argument `-v /tmp:/root` puts the `/tmp` directory into the container as
+A few example cgo files are provided with the source of this tool, in the folders 
+`example`, `tests` and `tests-memory`. More examples, used in our benchmarks in the 
+paper, are available — along with their original Go code, a brief description of 
+each of them and the expected output — in the 
+[benchmark repository](https://github.com/JujuYuki/godel2-benchmark). 
+
+#### Code extraction with `migoinfer`
+
+Given an example Go file, for example named `example.go`:
+
+    cd /path/to/example
+    docker run -ti --rm -v $(pwd):/root jgabet/godel2:latest migoinfer example.go > example.cgo
+
+The extracted MiGo output will be written to the `example.cgo` file in the directory of the example file.
+
+You may then use this cgo file in the following section for automated analysis.
+
+#### MiGo types analysis with `Godel`
+
+Given an example cgo file, run the example with:
+
+    cd /path/to/example
+    docker run -ti --rm -v $(pwd):/root jgabet/godel2:latest Godel example.cgo    # Model check
+    docker run -ti --rm -v $(pwd):/root jgabet/godel2:latest Godel -T example.cgo # Termination check
+
+The argument `-v $(pwd):/root` puts the current path into the container as
 `/root`, so the `example.cgo` file is found in the container as
 `/root/example.cgo`.
 
-Alternatively, use the `docker-run` script to run the examples:
+Alternatively, use the `docker-run` script to run the examples, with the `example.cgo` file 
+present in the same directory as the docker-run script given in this repository:
 
-    cd /path/to/example;
-    docker-run example.cgo
+    ./docker-run example.cgo
 
-This puts `/path/to/example` into docker and run the example inside the container,
+This puts the current path into docker and runs the example inside the container,
 all arguments are passed to the `Godel` binary inside the container, e.g.
 
-    docker-run -T example.cgo # Term check
+    ./docker-run -T example.cgo # Termination check
 
-### Development Environment via Docker
+Please note, this script currently runs `Godel` only. For automated extraction of MiGo types from 
+a given Go program, please refer to the full command given in the relevant section above.
+
+### Option 2: Development Environment via Docker
 
 This is similar to above, except the `Godel` binary in the current directory
 will be used instead, so small modifications can be tested immediately. The
 termination checker and its dependencies are in the container.
 
-    dev-run example.cgo
+    ./dev-run example.cgo
 
-### Build from scratch
+### Option 3: Build from scratch
 
-Instructions to build from scratch can be found below.
+Instructions to build the `Godel` tool from scratch can be found below.
 There are three components: `Godel` frontend, the model checker backend,
 and the termination analyser backend.
 
@@ -71,7 +107,8 @@ The `Godel` binary should be created after a successful build.
 #### Model checker
 
 The model checker we use is
-[mCRL2](http://www.mcrl2.org/web/user_manual/index.html) (2018 release),
+[mCRL2](http://www.mcrl2.org/web/user_manual/index.html) (2018 release used in 
+the Docker image, 2019 release shown to work on our testing machine),
 and can be downloaded from their official website (recommended).
 
 #### Termination checker
@@ -90,7 +127,7 @@ To build them from source, we need the following dependencies
 - OCaml
 
 First download Yices (version 1), visit
-http://yices.csl.sri.com/old/download-yices1.shtml to obtain the package,
+http://yices.csl.sri.com/old/download-yices1.html to obtain the package,
 extract and make the `yices` binary available in `$PATH`.
 
 On Ubuntu, the other dependencies can be installed via `apt-get`:
